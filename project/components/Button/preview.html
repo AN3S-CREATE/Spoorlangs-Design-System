@@ -1,0 +1,56 @@
+<!-- @dsCard group="Actions" height=760 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Button — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  #root { padding: 24px; display: flex; flex-direction: column; gap: 24px; }
+  .state { display: flex; flex-direction: column; gap: 8px; }
+  .state > small { color: var(--muted-foreground); font-size: 12px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var icon = function (name) { return h(S.ButtonIcon, { name: name }); };
+  var state = function (caption, className, children) {
+    return h('div', { className: 'state' },
+      h('small', null, caption),
+      h('div', { className: className }, children));
+  };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    state('.button-primary — link, WhatsAppButton, trailing arrow-right', 'row', [
+      h(S.Button, { key: 'a', href: '/quote?service=&pickup=' }, 'Get a quote'),
+      h(S.WhatsAppButton, { key: 'b', label: 'WhatsApp us' }),
+      h(S.Button, { key: 'c', href: '/quote?service=&pickup=', trailingIcon: icon('arrow-right') }, 'Get a quote')
+    ]),
+    state('.button-secondary — leading mail icon, label only', 'row', [
+      h(S.Button, { key: 'a', variant: 'secondary', href: 'mailto:drive@spoorlangs.online', icon: icon('mail'), wrapLabel: false }, 'drive@spoorlangs.online'),
+      h(S.Button, { key: 'b', variant: 'secondary', href: '/quote?service=&pickup=' }, 'Fill in the quote form'),
+      h(S.Button, { key: 'c', variant: 'secondary', href: '/contact' }, 'Contact details')
+    ]),
+    state('.button-compact — header .nav-quote; WhatsAppButton compact', 'row', [
+      h(S.Button, { key: 'a', compact: true, className: 'nav-quote', href: '/quote?service=&pickup=', wrapLabel: true }, 'Get a quote'),
+      h(S.WhatsAppButton, { key: 'b', label: 'WhatsApp us', compact: true })
+    ]),
+    state('real <button>s inside .quote-actions — submit, email, DescribeMove helper', 'row quote-actions', [
+      h(S.Button, { key: 'a', type: 'submit', icon: icon('message-circle') }, 'Send on WhatsApp'),
+      h(S.Button, { key: 'b', variant: 'secondary', icon: icon('mail') }, 'Send by email'),
+      h(S.Button, { key: 'c', variant: 'secondary', icon: icon('wand-sparkles') }, 'Fill in the form for me'),
+      h(S.Button, { key: 'd', type: 'submit', icon: icon('calendar-check') }, 'Request this booking')
+    ]),
+    state('.hero-actions — the second .button-primary renders as the ghost', 'row hero-actions', [
+      h(S.Button, { key: 'a', href: '/quote?service=&pickup=' }, 'Get a quote'),
+      h(S.WhatsAppButton, { key: 'b', label: 'WhatsApp us' })
+    ]),
+    state('.services-cta — inverted primary on the site\u2019s own orange band (bundle.css .services-cta: padding-block 5rem, 1px top border, no radius)', 'row services-cta', [
+      h(S.Button, { key: 'a', href: '/quote?service=&pickup=', trailingIcon: icon('arrow-right') }, 'Describe your move')
+    ])
+  ));
+</script>
+</body>
+</html>

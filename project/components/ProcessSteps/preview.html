@@ -1,0 +1,50 @@
+<!-- @dsCard group="Content" height=1500 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ProcessSteps — preview</title>
+<style>
+  .ds-states { display: grid; gap: 32px; padding: 24px; }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  var steps = [
+    { number: '01', title: 'Collect', body: 'The collection pin, vehicle notes and written window are confirmed before the job starts.' },
+    { number: '02', title: 'Drive', body: 'A professional driver (owner or vetted freelancer) takes the vehicle on its own wheels to the agreed delivery pin.' },
+    { number: '03', title: 'Hand over', body: 'Proof of Delivery records the handover and closes the job.' }
+  ];
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('section.process-section · split heading + figure.wide-visual.process-visual + ol.process-steps (home, #process)',
+        h(S.ProcessSection, {
+          id: 'process',
+          eyebrow: 'Simple by design',
+          title: 'Collect. Drive. Hand over.',
+          lead: 'Your vehicle stays on its own wheels from collection to a documented handover.',
+          image: { src: '/_blob/657547753bdf0d204410d1d3d7e3e101', alt: 'Collect, drive, then hand over with Proof of Delivery' },
+          steps: steps
+        })
+      ),
+      state('ol.process-steps alone · three ProcessStep children, no figure',
+        h(S.ProcessSteps, null,
+          h(S.ProcessStep, { number: '01', title: 'Collect', body: 'The collection pin, vehicle notes and written window are confirmed before the job starts.' }),
+          h(S.ProcessStep, { number: '02', title: 'Drive', body: 'A professional driver (owner or vetted freelancer) takes the vehicle on its own wheels to the agreed delivery pin.' }),
+          h(S.ProcessStep, { number: '03', title: 'Hand over', body: 'Proof of Delivery records the handover and closes the job.' })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

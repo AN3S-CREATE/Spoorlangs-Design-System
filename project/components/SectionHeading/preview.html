@@ -1,0 +1,56 @@
+<!-- @dsCard group="Typography" height=1160 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SectionHeading — preview</title>
+<style>
+  .ds-states { display: grid; gap: 32px; padding: 24px; }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('.section-heading · eyebrow + h2 + p (home, services section)',
+        h(S.SectionHeading, {
+          eyebrow: 'Gauteng on-wheels',
+          id: 'services-title',
+          title: 'Six ways to keep moving.',
+          lead: 'Professional vehicle relocation for runners — powered by people, not trucks or trailers.'
+        })
+      ),
+      state('.split-heading · eyebrow + h2 left, p right at ≥ 900px (home, process section)',
+        h(S.SplitHeading, {
+          className: 'site-shell',
+          eyebrow: 'Simple by design',
+          id: 'process-title',
+          title: 'Collect. Drive. Hand over.',
+          lead: 'Your vehicle stays on its own wheels from collection to a documented handover.'
+        })
+      ),
+      state('.section-heading · eyebrow + h1.quote-title + p.lead (pricing page)',
+        h(S.SectionHeading, {
+          eyebrow: 'Guide rates',
+          level: 1,
+          quoteTitle: true,
+          title: 'Honest numbers, confirmed on the quote.',
+          lead: 'Zone-based guide rates for on-wheels delivery — a driver collects your vehicle and drives it. Final pin-to-pin pricing is confirmed on your quote before anything moves.'
+        })
+      ),
+      state('Heading level 3 (home, .pod-layout)',
+        h(S.Heading, { level: 3 }, 'POD means Proof of Delivery.')
+      )
+    )
+  );
+</script>
+</body>
+</html>

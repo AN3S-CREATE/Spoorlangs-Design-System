@@ -1,0 +1,13 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+*.swp
+.vscode/
+
+# Local scratch and logs
+*.log
+scratch/
+tmp/
+
+# Node, if tooling is ever added here
+node_modules/

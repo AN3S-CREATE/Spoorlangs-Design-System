@@ -1,0 +1,75 @@
+<!-- @dsCard group="Data" height=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PricingTable — preview</title>
+<style>
+  /* layout of the states only — the component is styled by tokens.css + bundle.css */
+  #root { display: grid; gap: 32px; padding: 24px; }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+  .ds-narrow { max-width: 360px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  /* /pricing — page-pricing.html "Zone rates", the three rows and nine guide rates verbatim. */
+  var pricingRows = [
+    { zone: 'Local', note: 'Within the Johannesburg metro', standard: 'R950', rush: 'R1 350', afterHours: 'R1 650' },
+    { zone: 'JHB–PTA', note: 'Johannesburg to Pretoria corridor', standard: 'R1 850', rush: 'R2 450', afterHours: 'R2 950' },
+    { zone: 'Greater Gauteng', note: 'Beyond the metro, inside Gauteng', standard: 'R2 450', rush: 'R3 150', afterHours: 'R3 750' }
+  ];
+  var pricingNotes = [
+    'All rates are guide rates and exclude VAT. Spoorlangs is not VAT registered — no VAT is added.',
+    'After-hours and Sunday runs are a named service with their own rate, not a 24/7 promise.',
+    'Outside these corridors there is no per-km tariff — WhatsApp Nico and we will quote you honestly.'
+  ];
+
+  /* /quote — page-quote.html .guide-rates, same nine rates, the middle zone written out. */
+  var guideRows = [
+    { zone: 'Local', standard: 'R950', rush: 'R1 350', afterHours: 'R1 650' },
+    { zone: 'Johannesburg–Pretoria', standard: 'R1 850', rush: 'R2 450', afterHours: 'R2 950' },
+    { zone: 'Greater Gauteng', standard: 'R2 450', rush: 'R3 150', afterHours: 'R3 750' }
+  ];
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(React.Fragment, null,
+      state('PricingTable + notes · /pricing — .pricing-table-wrap, sr-only caption, zone notes, .pricing-notes',
+        h(S.PricingTable, {
+          caption: 'Guide rates by zone and service speed, excluding VAT',
+          columns: ['Zone', 'Standard', 'Rush', 'After-hours / Sunday'],
+          rows: pricingRows,
+          notes: pricingNotes
+        })
+      ),
+      state('GuideRates · /quote — compact .guide-rates: h2 + suffix, .guide-rates-scroll table, footnote',
+        h(S.GuideRates, {
+          heading: 'Guide',
+          headingSuffix: '· excl. VAT · confirm on quote',
+          headingId: 'guide-rates-title',
+          columns: ['Zone', 'Standard', 'Rush', 'After-hours'],
+          rows: guideRows,
+          footnote: 'After-hours / Sunday = named rate.'
+        })
+      ),
+      state('PricingTable in a 360px column — the wrap scrolls horizontally (table min-width 34rem)',
+        h('div', { className: 'ds-narrow' },
+          h(S.PricingTable, {
+            caption: 'Guide rates by zone and service speed, excluding VAT',
+            columns: ['Zone', 'Standard', 'Rush', 'After-hours / Sunday'],
+            rows: pricingRows
+          })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

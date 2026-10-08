@@ -1,0 +1,32 @@
+<!-- @dsCard group="Forms" height=1000 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DescribeMove — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  #root { padding: 24px; display: flex; flex-direction: column; gap: 24px; background: var(--background); }
+  .state { display: flex; flex-direction: column; gap: 8px; }
+  .state > small { color: var(--muted-foreground); font-family: var(--font-sans); font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var typed = 'I bought a 2019 Toyota Corolla at the auction in Boksburg and need it driven to my house in Sandton on Thursday morning.';
+  var noop = function () {};
+  var state = function (caption, node) {
+    return h('div', { className: 'state' }, h('small', null, caption), node);
+  };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    state('As on /quote — empty; the site’s eyebrow, heading, copy, sr-only label, placeholder and button',
+      h(S.DescribeMove, { onFill: noop })),
+    state('Running — the site’s own example typed in, button :disabled (opacity .6, cursor:progress); .spin on the wand demonstrates the shipped keyframes — the site’s loading markup is not in the pack',
+      h(S.DescribeMove, { titleId: 'describe-move-title-2', textareaId: 'move-description-2', defaultValue: typed, disabled: true, iconClassName: 'spin', onFill: noop })),
+    state('Summary and error lines — .describe-move-summary (orange .85rem/700/1.6) and .describe-move-error (orange .82rem/700) render through the summary / error props; their copy is not in the source pack, so nothing is rendered here (no invented words inside the component)', null)
+  ));
+</script>
+</body>
+</html>

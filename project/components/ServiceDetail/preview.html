@@ -1,0 +1,92 @@
+<!-- @dsCard group="Sections" height=4000 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ServiceDetail — preview</title>
+<style>
+  /* layout of the preview only — the component is styled by bundle.css */
+  body { margin: 0; background: var(--background); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var QUOTE = '/quote?service=&pickup=';
+  var WHATSAPP = 'https://wa.me/27662715887?text=Hi%20Spoorlangs%20%E2%80%94%20I%20need%20help%20choosing%20a%20vehicle%20delivery%20service.';
+  /* page-services.html at 1180px: intro, articles 01–03 with the mid CTA after the third, notes, orange closing band.
+     Articles 04–06 (service-spotlight-4…6.png, car-front / map-pin / file-check-corner) take the same props; three are
+     shown because the card height is capped at 4000px. The 4.5rem top padding is the site clearing its fixed header. */
+  var services = [
+    {
+      index: '01', image: '/_blob/9875c43d82ad037e5b19b2f3095d3504', alt: 'Same-day vehicle delivery by Spoorlangs', loading: 'eager',
+      iconName: 'clock-3', eyebrow: 'Time-sensitive Gauteng moves', title: 'Same-day',
+      paragraphs: [
+        'A professional runner collects your roadworthy vehicle and drives it directly to its destination on its own wheels. Same-day availability depends on the route, requested collection time and the driver available on the day.',
+        'Send the collection point, destination and preferred timing. Spoorlangs confirms a realistic collection window before wheels turn.'
+      ],
+      href: '/quote?service=same-day&pickup=', linkLabel: 'Request this service'
+    },
+    {
+      index: '02', image: '/_blob/bee1d3c9e018d4138550ed8831b3f2fc', alt: 'Auction vehicle delivery by Spoorlangs', loading: 'lazy',
+      iconName: 'gavel', eyebrow: 'Collection after vehicle release', title: 'Auction',
+      paragraphs: [
+        'For runner vehicles bought at auction, Spoorlangs provides direct on-wheels collection and delivery across Gauteng. The trip is planned around the auction house’s release process and collection times.',
+        'Share the auction location, release details, destination and vehicle information. Spoorlangs confirms what is needed before a driver is sent.'
+      ],
+      href: '/quote?service=auction&pickup=', linkLabel: 'Request this service'
+    },
+    {
+      index: '03', image: '/_blob/54223e1ef275135bddffb42adf0216ef', alt: 'After-hours vehicle delivery by Spoorlangs', loading: 'lazy',
+      iconName: 'moon', eyebrow: 'Planned outside business hours', title: 'After-hours',
+      paragraphs: [
+        'Vehicle movements can be arranged after hours or over a weekend in Gauteng when a driver is available. These runs are planned in advance so the right collection and handover arrangements can be confirmed.',
+        'Send your preferred date and time as early as possible. Spoorlangs confirms the slot before the trip is treated as booked.'
+      ],
+      href: '/quote?service=after-hours&pickup=', linkLabel: 'Request this service'
+    }
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(React.Fragment, null,
+      h(S.ServiceDetail, {
+        intro: {
+          eyebrow: 'Gauteng vehicle delivery',
+          title: 'Driven for the job at hand.',
+          lead: 'Six focused services for roadworthy runner vehicles, handled on their own wheels with a named person from collection to handover.',
+          quoteHref: QUOTE, quoteLabel: 'Get a quote',
+          whatsappHref: WHATSAPP, whatsappLabel: 'WhatsApp us'
+        },
+        sectionLabel: 'Spoorlangs services',
+        services: services,
+        midCta: {
+          text: 'Not sure which fits? Tell us the move.',
+          ariaLabel: 'Get a quote or WhatsApp Spoorlangs',
+          quoteHref: QUOTE, quoteLabel: 'Get a quote',
+          whatsappHref: WHATSAPP, whatsappLabel: 'WhatsApp us'
+        },
+        midCtaAfter: 3,
+        notes: {
+          eyebrow: 'Before you book',
+          title: 'Clear terms before the wheels turn.',
+          id: 'services-notes-title',
+          items: [
+            'Runner vehicles only: the vehicle must start, drive, be licensed and be roadworthy.',
+            'Payment terms are agreed with Spoorlangs and confirmed in your quote before collection.',
+            'Cancellation terms and any charge are confirmed in writing when your trip is booked.',
+            'Cover status is shared honestly on request while we bootstrap; no cover certificate is claimed on this site.'
+          ]
+        },
+        cta: {
+          eyebrow: 'Not sure which service fits?',
+          title: 'Tell us where the vehicle needs to go.',
+          id: 'services-cta-title',
+          text: 'We will confirm the right service, availability and practical timing for your Gauteng run.',
+          href: QUOTE, ctaLabel: 'Describe your move'
+        }
+      })
+    )
+  );
+</script>
+</body>
+</html>

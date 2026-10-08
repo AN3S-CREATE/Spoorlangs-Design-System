@@ -1,0 +1,53 @@
+<!-- @dsCard group="Content" height=640 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TrustRitual — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by bundle.css. */
+  .ds-states { display: grid; gap: 32px; padding: 24px; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+  .ds-narrow { max-width: 34rem; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('.site-shell.pod-layout · photo beside eyebrow, h3, paragraph and .trust-ritual (home, #why)',
+        h(S.TrustRitual, {
+          className: 'site-shell',
+          imageSrc: '/_blob/b30b9015991039f54225ca96503a6db7',
+          imageAlt: 'Driver recording a vehicle handover for Proof of Delivery',
+          eyebrow: 'Proof at handover',
+          title: 'POD means Proof of Delivery.',
+          lead: 'The job is closed when you have proof of delivery, not when we say so.',
+          items: ['Collect pin confirmed', 'Live pin on request while we drive', 'POD closes the job.'],
+          ariaLabel: 'Spoorlangs collection and delivery proof process'
+        })
+      ),
+      state('.trust-ritual alone · TrustRitualList with explicit numerals',
+        h('div', { className: 'ds-narrow' },
+          h(S.TrustRitualList, {
+            ariaLabel: 'Spoorlangs collection and delivery proof process',
+            items: [
+              { number: '01', label: 'Collect pin confirmed' },
+              { number: '02', label: 'Live pin on request while we drive' },
+              { number: '03', label: 'POD closes the job.' }
+            ]
+          })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

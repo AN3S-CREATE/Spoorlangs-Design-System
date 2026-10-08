@@ -1,0 +1,52 @@
+<!-- @dsCard group="Sections" height=1300 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WhatsappBand — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  .ds-states { display: grid; gap: 24px; padding: 24px 0; }
+  .ds-state-label { margin: 0 0 8px; padding: 0 24px; font: 700 11px/1.4 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var WA_HREF = 'https://wa.me/27662715887?text=Hi%20Spoorlangs%20%E2%80%94%20quote%20request'; /* the site's prefilled wa.me link */
+  function state(label, node) {
+    return h('section', null, h('p', { className: 'ds-state-label' }, label), node);
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('Default — home, between #why and #faq (every prop is the site\'s copy)',
+        h(S.WhatsappBand, {
+          eyebrow: 'Talk directly to Spoorlangs',
+          title: 'Have a runner to move?',
+          text: 'Share the collection point, destination, vehicle and preferred timing.',
+          'aria-label': 'WhatsApp quote call to action',
+          actions: [
+            { variant: 'primary', href: WA_HREF, target: '_blank', rel: 'noreferrer', 'aria-label': 'WhatsApp +27 66 271 5887', icon: 'message-circle', label: 'WhatsApp us', trailingIcon: 'arrow-right' },
+            { variant: 'secondary', href: '/quote?service=&pickup=', label: 'Fill in the quote form' }
+          ]
+        })
+      ),
+      state('children — one WhatsApp action only, with the /faq and /pricing label "Ask on WhatsApp"',
+        h(S.WhatsappBand, null,
+          h(S.WhatsappBandAction, { href: WA_HREF, target: '_blank', rel: 'noreferrer', 'aria-label': 'WhatsApp +27 66 271 5887', icon: 'message-circle', trailingIcon: 'arrow-right' }, 'Ask on WhatsApp')
+        )
+      ),
+      state('actions — Brand Book p08 CTA microcopy "Get a quote on WhatsApp" as the primary label (site says "WhatsApp us" — for Andries Liebenberg)',
+        h(S.WhatsappBand, {
+          actions: [
+            { variant: 'primary', href: WA_HREF, target: '_blank', rel: 'noreferrer', 'aria-label': 'WhatsApp +27 66 271 5887', icon: 'message-circle', label: 'Get a quote on WhatsApp', trailingIcon: 'arrow-right' },
+            { variant: 'secondary', href: '/quote?service=&pickup=', label: 'Fill in the quote form' }
+          ]
+        })
+      )
+    )
+  );
+</script>
+</body>
+</html>

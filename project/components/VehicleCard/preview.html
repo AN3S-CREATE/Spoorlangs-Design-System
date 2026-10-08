@@ -1,0 +1,51 @@
+<!-- @dsCard group="Data" height=900 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>VehicleCard — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by bundle.css. */
+  body { margin:0; padding:24px; background:var(--background); }
+  .ds-states { display:grid; gap:32px; }
+  .ds-state-label { margin:0 0 8px; font:500 12px/1.5 var(--font-sans); color:var(--muted-foreground); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  /* The site's four cards (page-pricing.html, "What we move"), verbatim and in site order. */
+  var vehicles = [
+    { title: 'Sedans & hatchbacks', description: 'Core work. Standard zone rates apply — the vehicle must start and drive.' },
+    { title: 'SUVs & bakkies', description: 'Same zone bands. The quote may adjust for size or height — confirmed before you book.' },
+    { title: 'Vans & LDVs', description: 'Moved as runners only — they must start and drive. No separate light-commercial product yet.' },
+    { title: 'Luxury & classic', description: 'Specialist moves. No published rate — WhatsApp Nico and we will quote you directly.' }
+  ];
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('section.faq-section-page · h2.faq-group-heading + .pricing-vehicle-grid + p.lead (/pricing "What we move")',
+        h(S.VehicleSection, {
+          id: 'vehicles-title',
+          heading: 'What we move',
+          items: vehicles,
+          note: 'Runners only — the vehicle must start and drive. Non-runners, tows and trailer work fall outside what we do.'
+        })
+      ),
+      state('.pricing-vehicle-grid · the four cards alone — one column, two from 700px',
+        h(S.VehicleGrid, { items: vehicles })
+      ),
+      state('.pricing-vehicle-card · one card, copy passed as children',
+        h(S.VehicleCard, { title: 'Luxury & classic' }, 'Specialist moves. No published rate — WhatsApp Nico and we will quote you directly.')
+      )
+    )
+  );
+</script>
+</body>
+</html>

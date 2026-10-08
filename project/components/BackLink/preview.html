@@ -1,0 +1,33 @@
+<!-- @dsCard group="Navigation" height=240 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BackLink — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  #root { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+  .state-label { font: 500 11px/1.5 var(--font-sans); color: var(--muted-foreground); margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(React.Fragment, null,
+      h('div', { className: 'state' },
+        h('div', { className: 'state-label' }, 'Rest: titanium, arrow-left. Hover: orange. First element of every sub-page shell.'),
+        h(S.BackLink, { href: '/' }, 'Back to home')
+      ),
+      h('div', { className: 'state' },
+        h('div', { className: 'state-label' }, 'As /privacy renders it: inside .legal-page, the page’s link rule repaints it orange and underlined (source quirk).'),
+        h('div', { className: 'legal-page' },
+          h(S.BackLink, { href: '/' }, 'Back to home')
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

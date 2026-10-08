@@ -1,0 +1,159 @@
+<!-- @dsCard group="Forms" height=3080 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>QuoteForm — preview</title>
+<style>
+  /* Stage layout only — the component is styled by bundle.css. */
+  body { margin: 0; background: var(--background); }
+  #root { display: grid; gap: 24px; padding-bottom: 24px; }
+  .state { display: grid; gap: 8px; }
+  .caption { margin: 0 24px; font: 500 12px/1.5 var(--font-sans); color: var(--muted-foreground); }
+  .stage { padding: 0 24px; }
+  .stage-form { max-width: 46rem; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  /* Copy verbatim from page-quote.html; error sentences from the site's zod schema (quote-schema-CezrbQDx.js). */
+  var WA_QUOTE = 'https://wa.me/27662715887?text=Hi%20Spoorlangs%20%E2%80%94%20quote%20request';
+  var SERVICE_OPTIONS = [
+    { value: 'same-day', label: 'Same-day' }, { value: 'auction', label: 'Auction' },
+    { value: 'after-hours', label: 'After-hours' }, { value: 'fleet', label: 'Fleet' },
+    { value: 'live-pin', label: 'Live pin' }, { value: 'pod', label: 'POD' }
+  ];
+  var TYPE_OPTIONS = [
+    { value: '', label: 'Choose…' }, { value: 'hatch', label: 'hatch' }, { value: 'sedan', label: 'sedan' },
+    { value: 'suv', label: 'suv' }, { value: 'bakkie', label: 'bakkie' }, { value: 'van', label: 'van' },
+    { value: 'other', label: 'other' }
+  ];
+  var ERRORS = {
+    pickup: 'Where should the vehicle be collected?',
+    dropoff: 'Where should the vehicle be delivered?',
+    vehicle_make: 'Which make is the vehicle?',
+    vehicle_model: 'Which model is the vehicle?',
+    name: 'Please enter your name.',
+    phone: 'Please enter a contact number.',
+    consent: 'Please tick the box so we may use your details to reply.'
+  };
+
+  /* The site's twelve fields in order. `prefix` keeps ids unique across the two forms on this page; names stay the site's. */
+  function fields(prefix, errors) {
+    var list = [
+      { id: 'service_type', label: 'Service', control: 'select', options: SERVICE_OPTIONS, invalid: false },
+      { id: 'preferred_window', label: 'Preferred date and time (optional)', placeholder: 'e.g. Thursday morning or asap' },
+      { id: 'pickup', label: 'Collection point', invalid: false },
+      { id: 'dropoff', label: 'Delivery point', invalid: false },
+      { id: 'vehicle_make', label: 'Vehicle make', invalid: false },
+      { id: 'vehicle_model', label: 'Vehicle model', invalid: false },
+      { id: 'vehicle_year', label: 'Year (optional)', inputMode: 'numeric', invalid: false },
+      { id: 'vehicle_type', label: 'Vehicle type (optional)', control: 'select', options: TYPE_OPTIONS },
+      { id: 'name', label: 'Your name', autoComplete: 'name', invalid: false },
+      { id: 'phone', label: 'Contact number', inputMode: 'tel', autoComplete: 'tel', invalid: false },
+      { id: 'notes', label: 'Anything else? (optional)', control: 'textarea', rows: 4, maxLength: 500, wide: true, invalid: false }
+    ];
+    return list.map(function (f) {
+      var out = {};
+      for (var k in f) out[k] = f[k];
+      out.name = f.id;
+      out.id = prefix + f.id;
+      if (errors && errors[f.id]) { out.invalid = true; out.error = errors[f.id]; }
+      return out;
+    });
+  }
+  function consent(prefix, errors) {
+    var c = {
+      id: prefix + 'consent', name: 'consent', invalid: false,
+      label: h(React.Fragment, null,
+        'I agree that Spoorlangs may use these details to contact me about this quote, as set out in the ',
+        h('a', { href: '/privacy' }, 'privacy notice'), '.')
+    };
+    if (errors && errors.consent) { c.invalid = true; c.error = errors.consent; }
+    return c;
+  }
+  function corridor() {
+    return {
+      legend: 'Collection corridor',
+      chips: [
+        { label: 'Johannesburg' }, { label: 'Pretoria' }, { label: 'Greater Gauteng' },
+        { label: 'Outside Gauteng — WhatsApp us', href: WA_QUOTE + '%0ACollection%3A%20Outside%20Gauteng', target: '_blank', rel: 'noreferrer' }
+      ]
+    };
+  }
+  function actions() {
+    return [
+      h(S.QuoteAction, { key: 'wa', type: 'submit', icon: 'message-circle' }, 'Send on WhatsApp'),
+      h(S.QuoteAction, { key: 'mail', variant: 'secondary', icon: 'mail' }, 'Send by email')
+    ];
+  }
+  /* The compact guide-rates table the quote page puts under the privacy note — PricingTable's `.guide-rates`
+     markup (page-quote.html), written out here so this preview uses only QuoteForm's own exports. */
+  function guideRates() {
+    return h('section', { className: 'guide-rates', 'aria-labelledby': 'guide-rates-title' },
+      h('h2', { id: 'guide-rates-title' }, 'Guide ', h('span', null, '· excl. VAT · confirm on quote')),
+      h('div', { className: 'guide-rates-scroll' },
+        h('table', null,
+          h('thead', null, h('tr', null, h('th', null, 'Zone'), h('th', null, 'Standard'), h('th', null, 'Rush'), h('th', null, 'After-hours'))),
+          h('tbody', null,
+            h('tr', null, h('th', null, 'Local'), h('td', null, 'R950'), h('td', null, 'R1 350'), h('td', null, 'R1 650')),
+            h('tr', null, h('th', null, 'Johannesburg–Pretoria'), h('td', null, 'R1 850'), h('td', null, 'R2 450'), h('td', null, 'R2 950')),
+            h('tr', null, h('th', null, 'Greater Gauteng'), h('td', null, 'R2 450'), h('td', null, 'R3 150'), h('td', null, 'R3 750'))))),
+      h('p', null, 'After-hours / Sunday = named rate.'));
+  }
+  function state(caption, stageClass, content) {
+    return h('div', { className: 'state' },
+      h('p', { className: 'caption' }, caption),
+      h('div', { className: stageClass }, content));
+  }
+  function noSubmit(e) { e.preventDefault(); }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    state('1 · /quote as served (page-quote.html): QuoteLayout + QuoteIntro + QuoteForm — corridor chips, twelve fields, consent, actions. The DescribeMove section above the form is its own family.', '',
+      h(S.QuoteLayout, {
+        intro: h(S.QuoteIntro, {
+          backHref: '/', backLabel: 'Back to home',
+          eyebrow: 'Gauteng vehicle delivery',
+          title: 'Get a quote',
+          lead: 'Runner vehicles only, driven on their own wheels across Johannesburg and Greater Gauteng.',
+          privacyNote: h(React.Fragment, null,
+            'This builds a WhatsApp message to Spoorlangs. Nothing is stored on this page. The email option opens your email app with the same details ready to send. Read the ',
+            h('a', { href: '/privacy' }, 'privacy notice'), '.')
+        }, guideRates())
+      }, h(S.QuoteForm, {
+        corridor: corridor(),
+        fields: fields('', null),
+        consent: consent('', null),
+        actions: actions(),
+        onSubmit: noSubmit
+      }))),
+    state('2 · Submitted empty: aria-invalid="true" and the schema sentences in <span role="alert"> (client-rendered on the site; placement inferred). Border and label do not change in source.', 'stage stage-form',
+      h(S.QuoteForm, {
+        corridor: corridor(),
+        fields: fields('invalid-', ERRORS),
+        consent: consent('invalid-', ERRORS),
+        actions: actions(),
+        onSubmit: noSubmit
+      })),
+    state('3 · /quote-sent: QuoteSent shell. Markup system-given from the CSS; title = the route’s meta title; steps = site lines (FAQ, POD list). No reference and no .sent-summary rows — the page’s copy is not in source (only the message labels Service: / Pickup: / Drop-off: / Window: exist, in quote-schema); never a job record.', 'stage',
+      h(S.QuoteSent, {
+        title: 'Quote Sent',
+        nextTitle: 'Before the wheels turn.',
+        next: [
+          'Message any time. Nico replies from 07:30, and we confirm your window.',
+          'Collect pin confirmed',
+          'Live pin on request while we drive',
+          'POD closes the job.'
+        ],
+        actions: [
+          h(S.QuoteAction, { key: 'wa', href: WA_QUOTE, target: '_blank', rel: 'noreferrer', 'aria-label': 'WhatsApp +27 66 271 5887', icon: 'message-circle' }, 'WhatsApp us'),
+          h(S.QuoteAction, { key: 'mail', variant: 'secondary', href: 'mailto:drive@spoorlangs.online', icon: 'mail' }, 'drive@spoorlangs.online')
+        ]
+      }))
+  ));
+</script>
+</body>
+</html>

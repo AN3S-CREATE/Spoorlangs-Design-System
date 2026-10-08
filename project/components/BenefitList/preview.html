@@ -1,0 +1,59 @@
+<!-- @dsCard group="Content" height=1720 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BenefitList — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by bundle.css. */
+  .ds-states { display: grid; gap: 32px; padding: 24px; background: var(--background); }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+  .ds-states > div > section { margin: 0 -24px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  /* The site's four tiles (index.html, section#why), verbatim and in site order. */
+  var whyItems = [
+    { icon: 'users', title: 'Owner-driven first', text: 'Tight loop, not a dispatch queue.' },
+    { icon: 'clock-3', title: 'Clock as the product', text: 'Written window before wheels turn.' },
+    { icon: 'map-pin', title: 'Live pin + POD', text: 'Track on request; job closed when you have proof.' },
+    { icon: 'car-front', title: 'Honest scope', text: 'Gauteng runners only; no non-runners or long-haul truck lanes.' }
+  ];
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('section#why.section.why-section · eyebrow + h2 + lead + .benefit-list.benefit-grid + figure.why-visual (home)',
+        h(S.WhySection, {
+          id: 'why',
+          eyebrow: 'Why Spoorlangs',
+          title: 'Premium service. Human accountability.',
+          lead: 'Every movement is handled as a professional journey, with direct communication and a clear handover.',
+          items: whyItems,
+          image: {
+            src: '/_blob/27a1525e24393667005a851f11ccb3c8',
+            alt: 'Professional Gauteng vehicle delivery with journey updates and Proof of Delivery'
+          }
+        })
+      ),
+      state('.benefit-list.benefit-grid · the four tiles alone, two columns (one at ≤ 639px)',
+        h(S.BenefitList, { items: whyItems })
+      ),
+      state('.benefit-list without .benefit-grid · one column at every width, composed from BenefitItem',
+        h(S.BenefitList, { grid: false },
+          h(S.BenefitItem, { icon: 'map-pin', title: 'Live pin + POD' }, 'Track on request; job closed when you have proof.'),
+          h(S.BenefitItem, { icon: h(S.BenefitIcon, { name: 'car-front' }), title: 'Honest scope' }, 'Gauteng runners only; no non-runners or long-haul truck lanes.')
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

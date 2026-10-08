@@ -1,0 +1,47 @@
+<!-- @dsCard group="Typography" height=600 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IgnitionRule — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by tokens.css (.brand-*) and bundle.css. */
+  .ds-states { display: grid; gap: 24px; padding: 24px; background: var(--background); }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+  .ds-row { display: flex; align-items: flex-end; gap: 24px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('IgnitionHeading · size display (.brand-display, 96 px web) · h1 · Brand Book p22 rule 96 × 5 px',
+        h(S.IgnitionHeading, { level: 'h1', size: 'display', id: 'display-title' }, 'VEHICLE DELIVERY. DONE RIGHT.')
+      ),
+      state('IgnitionHeading · size h1 (.brand-h1, 48 px web) · h2 · default',
+        h(S.IgnitionHeading, { id: 'h1-title' }, 'SAME-DAY. ON WHEELS.')
+      ),
+      state('IgnitionHeading · size h2 (.brand-h2, 32 px web) · h3',
+        h(S.IgnitionHeading, { level: 'h3', size: 'h2' }, 'GUIDE RATES · EXCL. VAT')
+      ),
+      state('Comparison · rule "eyebrow" — the site’s .eyebrow::before dash, 2.5rem × 1px',
+        h(S.IgnitionHeading, { level: 'h3', size: 'h2', rule: 'eyebrow' }, 'GUIDE RATES · EXCL. VAT')
+      ),
+      state('IgnitionRule alone · ignition (96 × 5 px) beside eyebrow (2.5rem × 1px)',
+        h('div', { className: 'ds-row' },
+          h(S.IgnitionRule, null),
+          h(S.IgnitionRule, { variant: 'eyebrow' })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

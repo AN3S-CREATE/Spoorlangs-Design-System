@@ -1,0 +1,49 @@
+<!-- @dsCard group="Content" height=980 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ContactCards — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  #root { padding: 24px; display: flex; flex-direction: column; gap: 24px; }
+  .state > small { display: block; color: var(--muted-foreground); font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var state = function (caption, child) {
+    return h('div', { className: 'state' }, h('small', null, caption), child);
+  };
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    state('ContactWays — the two cards as /contact renders them: WhatsApp (external link) first, then Email (break-all value); hidden h2 "Ways to reach us"; two columns from 640px',
+      h(S.ContactWays, {
+        id: 'contact-ways',
+        heading: 'Ways to reach us',
+        cards: [
+          { href: 'https://wa.me/27662715887', external: true, icon: 'message-circle', label: 'WhatsApp', value: '+27 66 271 5887' },
+          { href: 'mailto:drive@spoorlangs.online', external: false, breakAll: true, icon: 'mail', label: 'Email', value: 'drive@spoorlangs.online' }
+        ]
+      })
+    ),
+    state('AreasWeServe — Oswald h2, muted intro, eight bordered .375rem area chips, muted closing line',
+      h(S.AreasWeServe, {
+        id: 'areas',
+        heading: 'Areas we serve',
+        intro: 'We come to you — no walk-in office. Pickup and drop-off across:',
+        areas: ['Johannesburg', 'Sandton', 'Midrand', 'Centurion', 'Pretoria', 'Ekurhuleni', 'Roodepoort & West Rand', 'Vereeniging & Vanderbijlpark'],
+        note: 'Runners only — the vehicle must start and drive. Outside these areas, WhatsApp Nico for a quote.'
+      })
+    ),
+    state('ContactActions — the closing CTA row with the site’s two links (Button family markup)',
+      h(S.ContactActions, null,
+        h('a', { className: 'button-primary', href: '/quote?service=&pickup=' }, h('span', null, 'Get a quote')),
+        h('a', { className: 'button-secondary', href: '/pricing' }, h('span', null, 'See guide rates'))
+      )
+    )
+  ));
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- @dsCard group="Sections" height=2040 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CoverageSection — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  .ds-states { display: grid; gap: 24px; padding: 24px 0; }
+  .ds-state-label { margin: 0 0 8px; padding: 0 24px; font: 700 11px/1.4 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  function state(label, node) {
+    return h('section', null, h('p', { className: 'ds-state-label' }, label), node);
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('Home — section#coverage (index.html): heading, static map of the eight areas, note, booking link (every prop is the site\'s copy)',
+        h(S.CoverageSection, {
+          id: 'coverage',
+          titleId: 'coverage-title',
+          eyebrow: 'Where we drive',
+          title: 'Gauteng, on the ground.',
+          lead: 'These are the areas Spoorlangs collects from and delivers to today. Nationwide is where we are headed — not a claim of branches elsewhere.',
+          mapLabel: 'Map of Gauteng areas Spoorlangs collects from and delivers to',
+          areas: [
+            { name: 'Johannesburg', lat: -26.2041, lng: 28.0473 },
+            { name: 'Sandton', lat: -26.1076, lng: 28.0567 },
+            { name: 'Midrand', lat: -25.9992, lng: 28.1263 },
+            { name: 'Centurion', lat: -25.8603, lng: 28.1894 },
+            { name: 'Pretoria', lat: -25.7479, lng: 28.2293 },
+            { name: 'Ekurhuleni', lat: -26.2285, lng: 28.3626 },
+            { name: 'Roodepoort & West Rand', lat: -26.1625, lng: 27.8725 },
+            { name: 'Vereeniging & Vanderbijlpark', lat: -26.6496, lng: 27.9587 }
+          ],
+          note: 'Pins mark the areas we cover — not live driver locations. Trip starting or ending outside these areas? Message us and we will tell you straight whether it can be done.',
+          bookingHref: '/coverage?service=&pickup=',
+          bookingLabel: 'Request a run'
+        })
+      ),
+      state('Coverage page — honesty list, map, note inside .site-shell.booking-page (page-coverage.html, below the "Request a run" title block)',
+        h('div', { className: 'site-shell booking-page' },
+          h(S.CoverageHonesty, {
+            'aria-label': 'Spoorlangs coverage and service scope',
+            items: [
+              'Based in Kempton Park',
+              'Johannesburg / Greater Gauteng on-wheels, day one',
+              'Outside Gauteng — WhatsApp us (no national branch list)',
+              'Runners only: the vehicle must start and drive'
+            ]
+          }),
+          h(S.CoverageMap, { 'aria-label': 'Map of Gauteng areas Spoorlangs collects from and delivers to' }),
+          h(S.CoverageNote, { variant: 'page' }, 'Coverage pins are approximate area centres. They do not show a driver, vehicle, active route or live position.')
+        )
+      ),
+      state('Server-rendered — the empty bordered box before Leaflet mounts (areas: [], no attribution)',
+        h('div', { className: 'site-shell' },
+          h(S.CoverageMap, { areas: [], attribution: false, 'aria-label': 'Map of Gauteng areas Spoorlangs collects from and delivers to' })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

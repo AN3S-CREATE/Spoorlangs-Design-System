@@ -1,0 +1,129 @@
+<!-- @dsCard group="Sections" height=1900 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BookingPage — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  .ds-states { display: grid; gap: 32px; padding: 24px; }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  /* lucide arrow-left (assets/Icons/arrow-left.svg), inlined so it takes currentColor */
+  function ArrowLeft() {
+    return h('svg', {
+      xmlns: 'http://www.w3.org/2000/svg', width: '24', height: '24', viewBox: '0 0 24 24', fill: 'none',
+      stroke: 'currentColor', strokeWidth: '2', strokeLinecap: 'round', strokeLinejoin: 'round',
+      className: 'lucide lucide-arrow-left', 'aria-hidden': 'true'
+    }, h('path', { d: 'm12 19-7-7 7-7' }), h('path', { d: 'M19 12H5' }));
+  }
+
+  /* lucide calendar-check (assets/Icons/calendar-check.svg) — the submit's icon */
+  function CalendarCheck() {
+    return h('svg', {
+      xmlns: 'http://www.w3.org/2000/svg', width: '24', height: '24', viewBox: '0 0 24 24', fill: 'none',
+      stroke: 'currentColor', strokeWidth: '2', strokeLinecap: 'round', strokeLinejoin: 'round',
+      className: 'lucide lucide-calendar-check', 'aria-hidden': 'true'
+    },
+      h('path', { d: 'M8 2v3' }), h('path', { d: 'M16 2v3' }),
+      h('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2' }),
+      h('path', { d: 'M3 9h18' }), h('path', { d: 'm9 15 2 2 4-4' }));
+  }
+
+  /* the site's own child blocks, class for class (styled by the BackLink, SectionHeading, Eyebrow,
+     QuoteForm, Field, CorridorChips and Button parts in bundle.css) */
+  function backLink() {
+    return h('a', { className: 'back-link', href: '/' }, h(ArrowLeft), h('span', null, 'Back to home'));
+  }
+
+  function sectionHeading(eyebrow, title, lead) {
+    return h('div', { className: 'section-heading' },
+      h('p', { className: 'eyebrow' }, eyebrow),
+      h('h1', { className: 'quote-title' }, title),
+      h('p', { className: 'lead' }, lead));
+  }
+
+  var chipClass = 'inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs';
+  var submitClass = 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 button-primary';
+
+  function field(id, label, extra, wide) {
+    var attrs = { id: id, 'aria-invalid': 'false', name: id };
+    for (var k in extra) { if (Object.prototype.hasOwnProperty.call(extra, k)) attrs[k] = extra[k]; }
+    return h('div', { className: wide ? 'field field-wide' : 'field' },
+      h('label', { htmlFor: id }, label),
+      h('input', attrs));
+  }
+
+  function selectField(id, label, options, placeholder) {
+    var opts = [];
+    if (placeholder) opts.push(h('option', { key: '', value: '', disabled: true }, placeholder));
+    for (var i = 0; i < options.length; i++) {
+      opts.push(h('option', { key: options[i][0], value: options[i][0] }, options[i][1]));
+    }
+    var attrs = { id: id, name: id };
+    if (placeholder) attrs.defaultValue = '';
+    return h('div', { className: 'field' },
+      h('label', { htmlFor: id }, label),
+      h('select', attrs, opts));
+  }
+
+  /* the /coverage booking form, field for field (page-coverage.html) */
+  function bookingForm() {
+    return h('form', { className: 'quote-form', noValidate: true, onSubmit: function (e) { e.preventDefault(); } },
+      h('fieldset', { className: 'corridor-picker field-wide' },
+        h('legend', null, 'Collection corridor'),
+        h('div', { className: 'corridor-chips' },
+          h('button', { className: chipClass, type: 'button' }, 'Johannesburg'),
+          h('button', { className: chipClass, type: 'button' }, 'Pretoria'),
+          h('button', { className: chipClass, type: 'button' }, 'Greater Gauteng'),
+          h('a', { href: 'https://wa.me/27662715887?text=Hi%20Spoorlangs%20%E2%80%94%20quote%20request%0ACollection%3A%20Outside%20Gauteng', target: '_blank', rel: 'noreferrer', className: chipClass, type: 'button' }, 'Outside Gauteng — WhatsApp us'))),
+      selectField('service_type', 'Service', [['same-day', 'Same-day'], ['auction', 'Auction'], ['after-hours', 'After-hours'], ['fleet', 'Fleet'], ['live-pin', 'Live pin'], ['pod', 'POD']]),
+      field('requested_date', 'Preferred date', { type: 'date' }),
+      field('pickup', 'Collection point', {}),
+      field('dropoff', 'Delivery point', {}),
+      field('preferred_window', 'Preferred time window', { placeholder: 'e.g. 09:00–12:00' }),
+      selectField('vehicle_type', 'Vehicle type', [['sedan', 'sedan'], ['hatchback', 'hatchback'], ['suv', 'suv'], ['bakkie', 'bakkie'], ['van', 'van'], ['other', 'other']], 'Choose…'),
+      field('vehicle_make', 'Vehicle make', {}),
+      field('vehicle_model', 'Vehicle model', {}),
+      field('vehicle_year', 'Vehicle year (optional)', { inputMode: 'numeric' }),
+      field('customer_name', 'Your name', { autoComplete: 'name' }),
+      field('phone', 'Phone number', { inputMode: 'tel', autoComplete: 'tel', placeholder: '+27821234567' }),
+      field('email', 'Email address', { type: 'email', autoComplete: 'email' }, true),
+      h('div', { className: 'field field-wide consent-field' },
+        h('label', { htmlFor: 'booking-consent' },
+          h('input', { id: 'booking-consent', type: 'checkbox', name: 'consent' }),
+          h('span', null, 'I agree that Spoorlangs may store and use these details to review and respond to this booking request, as set out in the ', h('a', { href: '/privacy' }, 'privacy policy'), '.'))),
+      h('div', { className: 'quote-actions' },
+        h('button', { className: submitClass, type: 'submit' }, h(CalendarCheck), h('span', null, 'Save & open WhatsApp'))));
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('/coverage · BookingPage shell (main.quote-main > .site-shell.booking-page) with the back link, title block and BookingSection: intro column beside the form from 900px',
+        h(S.BookingPage, null,
+          backLink(),
+          sectionHeading('Gauteng coverage', 'Request a run', 'The pins show service areas, never drivers. Send a booking request and Spoorlangs will review availability before confirming your run.'),
+          h(S.BookingSection, {
+            eyebrow: 'Booking request',
+            title: 'Tell us what needs moving.',
+            lead: 'Submitting this form creates a pending request. The run is booked only after Spoorlangs confirms it with you.'
+          }, bookingForm()))),
+      state('/pricing · the same shell opening another sub-page, main: false (the consumer already has a <main>)',
+        h(S.BookingPage, { main: false },
+          backLink(),
+          sectionHeading('Guide rates', 'Honest numbers, confirmed on the quote.', 'Zone-based guide rates for on-wheels delivery — a driver collects your vehicle and drives it. Final pin-to-pin pricing is confirmed on your quote before anything moves.')))
+    )
+  );
+</script>
+</body>
+</html>

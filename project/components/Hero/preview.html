@@ -1,0 +1,47 @@
+<!-- @dsCard group="Sections" height=900 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hero — preview</title>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  /* The home hero (index.html) with its copy verbatim; one state — the section is 100svh tall, so it fills the frame. */
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(S.Hero, {
+      imageSrc: '/_blob/6e5e5695c1f64bf9dbb2d3a6b4b14243',
+      imageAlt: 'Spoorlangs driver with a vehicle on wet asphalt',
+      kicker: 'Driver-powered vehicle relocation',
+      title: 'Vehicle delivery.',
+      titleAccent: 'Done right.',
+      titleId: 'hero-title',
+      secondary: 'Same-day. On wheels.',
+      lead: [
+        'Car delivery in Johannesburg & Gauteng · from Kempton Park',
+        'Runners only — the car must start and drive.'
+      ],
+      parity: {
+        title: 'Driven By People. Further Together.',
+        details: 'Kempton Park · Johannesburg / Greater Gauteng on-wheels · +27 66 271 5887 · drive@spoorlangs.online',
+        label: 'Spoorlangs service and contact details'
+      },
+      actions: [
+        h(S.HeroAction, { key: 'quote', href: '/quote?service=&pickup=' }, 'Get a quote'),
+        h(S.HeroAction, {
+          key: 'whatsapp',
+          href: 'https://wa.me/27662715887?text=Hi%20Spoorlangs%20%E2%80%94%20quote%20request',
+          target: '_blank',
+          rel: 'noreferrer',
+          'aria-label': 'WhatsApp +27 66 271 5887',
+          icon: 'message-circle',
+          trailingIcon: 'arrow-right'
+        }, 'WhatsApp us')
+      ]
+    })
+  );
+</script>
+</body>
+</html>

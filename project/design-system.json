@@ -1,0 +1,384 @@
+{
+ "v": 3,
+ "layout": "files",
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-08T15:43:36Z"
+ },
+ "title": "Spoorlangs",
+ "namespace": "Spoorlangs",
+ "libraries": [
+  {
+   "name": "react",
+   "version": "18.3.1",
+   "global": "React",
+   "file": "components/lib/react.production.min.js"
+  },
+  {
+   "name": "react-dom",
+   "version": "18.3.1",
+   "global": "ReactDOM",
+   "file": "components/lib/react-dom.production.min.js"
+  }
+ ],
+ "sections": {},
+ "groups": [
+  "Logos",
+  "Icons",
+  "Imagery",
+  "Motion"
+ ],
+ "assetGroups": {
+  "Logos": {
+   "name": "Logos",
+   "tile": "l",
+   "order": [
+    "main-full-dark.png",
+    "main-full-light.png",
+    "dark-mode.png",
+    "light-mode.png",
+    "horizontal.png",
+    "stacked.png",
+    "icon-only.png",
+    "wordmark-only.png",
+    "monochrome-white.png",
+    "single-colour-flame-s.png",
+    "sa-flag-edition.png",
+    "special-dynamic.png",
+    "whatsapp-avatar.png",
+    "favicon.png",
+    "apple-touch-icon.png",
+    "cover-facebook-820x312-LAUNCH.png"
+   ],
+   "files": {
+    "main-full-dark.png": {
+     "name": "main-full-dark.png",
+     "blob": "192c5a535993ae37d9e1294d83934d5f",
+     "size": 425491,
+     "type": "image/png"
+    },
+    "main-full-light.png": {
+     "name": "main-full-light.png",
+     "blob": "0896383e18f4af0068de61a1876a46ac",
+     "size": 427048,
+     "type": "image/png"
+    },
+    "dark-mode.png": {
+     "name": "dark-mode.png",
+     "blob": "a87fc0bd59d5e9007ba7db67a7d24109",
+     "size": 251277,
+     "type": "image/png"
+    },
+    "light-mode.png": {
+     "name": "light-mode.png",
+     "blob": "2eff63cbf8f16dc241f1e1397e7f5365",
+     "size": 335906,
+     "type": "image/png"
+    },
+    "horizontal.png": {
+     "name": "horizontal.png",
+     "blob": "28e1d009a9c046ff96bc8d8cebc3dc45",
+     "size": 144323,
+     "type": "image/png"
+    },
+    "stacked.png": {
+     "name": "stacked.png",
+     "blob": "485db86dde8fca013e80276b112c8bac",
+     "size": 542376,
+     "type": "image/png"
+    },
+    "icon-only.png": {
+     "name": "icon-only.png",
+     "blob": "5cc61a18559621e42dc1c5c30079da1f",
+     "size": 923884,
+     "type": "image/png"
+    },
+    "wordmark-only.png": {
+     "name": "wordmark-only.png",
+     "blob": "93e9881c17492c35cc060f08a58c5c0d",
+     "size": 74191,
+     "type": "image/png"
+    },
+    "monochrome-white.png": {
+     "name": "monochrome-white.png",
+     "blob": "694452e8b7ac21fa9d74d9e25d09ff34",
+     "size": 112342,
+     "type": "image/png"
+    },
+    "single-colour-flame-s.png": {
+     "name": "single-colour-flame-s.png",
+     "blob": "fb47f7635f4c220b1a20f7425ef4e5a1",
+     "size": 820821,
+     "type": "image/png"
+    },
+    "sa-flag-edition.png": {
+     "name": "sa-flag-edition.png",
+     "blob": "be65ba320022d64ba0bed6c67282d385",
+     "size": 386534,
+     "type": "image/png"
+    },
+    "special-dynamic.png": {
+     "name": "special-dynamic.png",
+     "blob": "52b861ef6e7451a15960b00992132c52",
+     "size": 455558,
+     "type": "image/png"
+    },
+    "whatsapp-avatar.png": {
+     "name": "whatsapp-avatar.png",
+     "blob": "e1608c29fd8c5bd216ee761105baac94",
+     "size": 1150682,
+     "type": "image/png"
+    },
+    "favicon.png": {
+     "name": "favicon.png",
+     "blob": "99507e5aa225c8eedb46e2077d4e9696",
+     "size": 4701,
+     "type": "image/png"
+    },
+    "apple-touch-icon.png": {
+     "name": "apple-touch-icon.png",
+     "blob": "dc41b3fe321d2ee56af7d95dbffdb97d",
+     "size": 16950,
+     "type": "image/png"
+    },
+    "cover-facebook-820x312-LAUNCH.png": {
+     "name": "cover-facebook-820x312-LAUNCH.png",
+     "blob": "7402b60d143954b290181592855efac3",
+     "size": 33182,
+     "type": "image/png"
+    }
+   }
+  },
+  "Icons": {
+   "name": "Icons",
+   "tile": "xs",
+   "order": [
+    "message-circle.svg",
+    "arrow-right.svg",
+    "arrow-left.svg",
+    "circle-check.svg",
+    "mail.svg",
+    "map-pin.svg",
+    "clock-3.svg",
+    "car-front.svg",
+    "calendar-check.svg",
+    "wand-sparkles.svg",
+    "users.svg",
+    "moon.svg",
+    "gavel.svg",
+    "file-check-corner.svg"
+   ],
+   "files": {
+    "message-circle.svg": {
+     "name": "message-circle.svg",
+     "blob": "710de7cec2cad6d2683bcfe0966bcf32",
+     "size": 369,
+     "type": "image/svg+xml"
+    },
+    "arrow-right.svg": {
+     "name": "arrow-right.svg",
+     "blob": "e342eacf0cd24f476e14835c5fef1846",
+     "size": 285,
+     "type": "image/svg+xml"
+    },
+    "arrow-left.svg": {
+     "name": "arrow-left.svg",
+     "blob": "cd0aa78319636010fd3107c74948db13",
+     "size": 285,
+     "type": "image/svg+xml"
+    },
+    "circle-check.svg": {
+     "name": "circle-check.svg",
+     "blob": "ec9281edf2d07890e1c84fda6e936c7b",
+     "size": 305,
+     "type": "image/svg+xml"
+    },
+    "mail.svg": {
+     "name": "mail.svg",
+     "blob": "955dc18e0ab50de0920a69f05e7522df",
+     "size": 333,
+     "type": "image/svg+xml"
+    },
+    "map-pin.svg": {
+     "name": "map-pin.svg",
+     "blob": "0c4c418d8b132fb57dd496a785d46f9f",
+     "size": 381,
+     "type": "image/svg+xml"
+    },
+    "clock-3.svg": {
+     "name": "clock-3.svg",
+     "blob": "39a940d5f563ed4980ee6254371ffa74",
+     "size": 291,
+     "type": "image/svg+xml"
+    },
+    "car-front.svg": {
+     "name": "car-front.svg",
+     "blob": "11d670fd5fb44862a883f312495388d5",
+     "size": 488,
+     "type": "image/svg+xml"
+    },
+    "calendar-check.svg": {
+     "name": "calendar-check.svg",
+     "blob": "3096c3f5b9363b4236e3e12f6b9c9cd8",
+     "size": 400,
+     "type": "image/svg+xml"
+    },
+    "wand-sparkles.svg": {
+     "name": "wand-sparkles.svg",
+     "blob": "d58e06c1a5ef9487e549eb68207fb779",
+     "size": 585,
+     "type": "image/svg+xml"
+    },
+    "users.svg": {
+     "name": "users.svg",
+     "blob": "f3eb688186529022336ec016b17aa7dd",
+     "size": 413,
+     "type": "image/svg+xml"
+    },
+    "moon.svg": {
+     "name": "moon.svg",
+     "blob": "6dffca4458b4dc26dd24ef48b97745d0",
+     "size": 346,
+     "type": "image/svg+xml"
+    },
+    "gavel.svg": {
+     "name": "gavel.svg",
+     "blob": "47bdb98b381f93da653f27847a38c0a6",
+     "size": 412,
+     "type": "image/svg+xml"
+    },
+    "file-check-corner.svg": {
+     "name": "file-check-corner.svg",
+     "blob": "10d834d5933b4c61cbb98f91e63c90cc",
+     "size": 427,
+     "type": "image/svg+xml"
+    }
+   }
+  },
+  "Imagery": {
+   "name": "Imagery",
+   "tile": "m",
+   "order": [
+    "hero-locked-M-poster.png",
+    "04-delivery-LAUNCH.png",
+    "how-it-works.png",
+    "why-choose-us.png",
+    "pod-moment.png",
+    "contact-cta.png",
+    "service-spotlight-1.png",
+    "service-spotlight-2.png",
+    "service-spotlight-3.png",
+    "service-spotlight-4.png",
+    "service-spotlight-5.png",
+    "service-spotlight-6.png"
+   ],
+   "files": {
+    "hero-locked-M-poster.png": {
+     "name": "hero-locked-M-poster.png",
+     "blob": "6e5e5695c1f64bf9dbb2d3a6b4b14243",
+     "size": 1157880,
+     "type": "image/png"
+    },
+    "04-delivery-LAUNCH.png": {
+     "name": "04-delivery-LAUNCH.png",
+     "blob": "59bd9abb8241448aa7fa154999aece52",
+     "size": 2775186,
+     "type": "image/png"
+    },
+    "how-it-works.png": {
+     "name": "how-it-works.png",
+     "blob": "657547753bdf0d204410d1d3d7e3e101",
+     "size": 2632901,
+     "type": "image/png"
+    },
+    "why-choose-us.png": {
+     "name": "why-choose-us.png",
+     "blob": "27a1525e24393667005a851f11ccb3c8",
+     "size": 2961385,
+     "type": "image/png"
+    },
+    "pod-moment.png": {
+     "name": "pod-moment.png",
+     "blob": "b30b9015991039f54225ca96503a6db7",
+     "size": 3303520,
+     "type": "image/png"
+    },
+    "contact-cta.png": {
+     "name": "contact-cta.png",
+     "blob": "f2696ac4c8443cbb6aaf7d0fbdc5947b",
+     "size": 1289760,
+     "type": "image/png"
+    },
+    "service-spotlight-1.png": {
+     "name": "service-spotlight-1.png",
+     "blob": "9875c43d82ad037e5b19b2f3095d3504",
+     "size": 2370354,
+     "type": "image/png"
+    },
+    "service-spotlight-2.png": {
+     "name": "service-spotlight-2.png",
+     "blob": "bee1d3c9e018d4138550ed8831b3f2fc",
+     "size": 2508007,
+     "type": "image/png"
+    },
+    "service-spotlight-3.png": {
+     "name": "service-spotlight-3.png",
+     "blob": "54223e1ef275135bddffb42adf0216ef",
+     "size": 1222217,
+     "type": "image/png"
+    },
+    "service-spotlight-4.png": {
+     "name": "service-spotlight-4.png",
+     "blob": "301865a7e5f8d3c3f3105ad358f57ce6",
+     "size": 2882306,
+     "type": "image/png"
+    },
+    "service-spotlight-5.png": {
+     "name": "service-spotlight-5.png",
+     "blob": "1bebc0776d66dcbc7bd11d1e1a3cab0c",
+     "size": 2767492,
+     "type": "image/png"
+    },
+    "service-spotlight-6.png": {
+     "name": "service-spotlight-6.png",
+     "blob": "5c2e9dfaf6c6cdf7f4201625af8ee3a7",
+     "size": 980151,
+     "type": "image/png"
+    }
+   }
+  },
+  "Motion": {
+   "name": "Motion",
+   "tile": "m",
+   "order": [
+    "hero-locked-M.mp4",
+    "hero-locked-M-preview.gif"
+   ],
+   "files": {
+    "hero-locked-M.mp4": {
+     "name": "hero-locked-M.mp4",
+     "blob": "d489dcf8276b9150416c51abb5fa5df9",
+     "size": 12775295,
+     "type": "video/mp4"
+    },
+    "hero-locked-M-preview.gif": {
+     "name": "hero-locked-M-preview.gif",
+     "blob": "1bcfc35743b89c2478ac56e61ff88d20",
+     "size": 1108925,
+     "type": "image/gif"
+    }
+   }
+  }
+ },
+ "blobs": {},
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "lastChange": {
+  "by": "Andries Liebenberg",
+  "at": "2026-10-08T17:37:39Z",
+  "via": "Claude Code",
+  "note": "Built from spoorlangs.online (fetched 2026-10-08) and Spoorlangs Brand Book v1.0 (8 Oct 2026); approved logo set 14 Sep 2026."
+ }
+}

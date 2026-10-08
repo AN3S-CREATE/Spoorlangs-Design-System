@@ -1,0 +1,52 @@
+<!-- @dsCard group="Forms" height=470 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CorridorChips — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  #root { display: flex; flex-direction: column; gap: 24px; padding: 24px; }
+  .state-label { font: 500 11px/1.5 var(--font-sans); color: var(--muted-foreground); margin: 0 0 6px; }
+  .narrow { width: 320px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var outsideGauteng = 'https://wa.me/27662715887?text=Hi%20Spoorlangs%20%E2%80%94%20quote%20request%0ACollection%3A%20Outside%20Gauteng';
+  var siteItems = [
+    { label: 'Johannesburg' },
+    { label: 'Pretoria' },
+    { label: 'Greater Gauteng' },
+    { label: 'Outside Gauteng — WhatsApp us', href: outsideGauteng }
+  ];
+  var state = function (caption, child, className) {
+    return h('div', { className: className ? 'state ' + className : 'state' },
+      h('div', { className: 'state-label' }, caption),
+      child);
+  };
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(React.Fragment, null,
+      state('As on /quote and /coverage — first row of .quote-form: legend, three <button> chips, the wa.me <a> chip. Hover: orange border, white text. Focus: orange outline + 1px ring.',
+        h(S.CorridorChips, { legend: 'Collection corridor', items: siteItems, onSelect: function () {} })
+      ),
+      state('Composed from CorridorChip children; the second chip carries the Tailwind disabled utilities (opacity .5, cursor not-allowed) — the site never renders one disabled.',
+        h(S.CorridorChips, { legend: 'Collection corridor' },
+          h(S.CorridorChip, { key: 'a' }, 'Johannesburg'),
+          h(S.CorridorChip, { key: 'b', disabled: true }, 'Pretoria'),
+          h(S.CorridorChip, { key: 'c' }, 'Greater Gauteng'),
+          h(S.CorridorChip, { key: 'd', href: outsideGauteng }, 'Outside Gauteng — WhatsApp us')
+        )
+      ),
+      state('In a 320px column: .corridor-chips wraps (flex-wrap, gap .5rem); each chip keeps whitespace-nowrap.',
+        h('div', { className: 'narrow' },
+          h(S.CorridorChips, { legend: 'Collection corridor', items: siteItems })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

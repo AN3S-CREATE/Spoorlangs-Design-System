@@ -1,0 +1,37 @@
+<!-- @dsCard group="Actions" height=470 width=390 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FloatingActions — preview</title>
+<style>
+  /* Preview layout only: each viewport box is a transformed containing block so the fixed cluster sits in its corner. */
+  .fa-states { display: grid; gap: 24px; padding: 24px; }
+  .fa-caption { margin: 0 0 8px; font: 500 12px/1.5 var(--font-sans); color: var(--titanium); }
+  .fa-viewport { position: relative; height: 120px; transform: translateZ(0); background: var(--background); border: 1px dashed var(--steel); }
+  .fa-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'fa-states' },
+      h('div', null,
+        h('p', { className: 'fa-caption' }, 'Every page \u2014 fixed bottom-right of the viewport'),
+        h('div', { className: 'fa-viewport' }, h(S.FloatingActions, null))
+      ),
+      h('div', null,
+        h('p', { className: 'fa-caption' }, '/quote \u2014 quote pill carries the active-route attributes'),
+        h('div', { className: 'fa-viewport' }, h(S.FloatingActions, { quoteActive: true }))
+      ),
+      h('div', null,
+        h('p', { className: 'fa-caption' }, 'Parts at rest'),
+        h('div', { className: 'fa-row' }, h(S.FloatingQuote, null), h(S.WhatsAppWidget, null))
+      )
+    )
+  );
+</script>
+</body>
+</html>

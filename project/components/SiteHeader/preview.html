@@ -1,0 +1,61 @@
+<!-- @dsCard group="Navigation" height=620 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SiteHeader — preview</title>
+<style>
+  /* Stage layout only. Each stage carries transform:translate(0) so the component's own
+     position:fixed resolves against the stage instead of the frame; nothing below restyles the header. */
+  body { margin: 0; padding: 24px; background: var(--background); }
+  #root { display: grid; gap: 24px; }
+  .state { display: grid; gap: 10px; }
+  .stage { position: relative; transform: translate(0); height: 120px; background: var(--background); }
+  .stage-hero { height: 200px; background: var(--background) url(/_blob/6e5e5695c1f64bf9dbb2d3a6b4b14243) 54% center / cover no-repeat; }
+  .caption { margin: 0; font: 500 12px/1.5 var(--font-sans); color: var(--muted-foreground); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var LOGO = '/_blob/192c5a535993ae37d9e1294d83934d5f';
+  function items(current) {
+    return [
+      { label: 'Services', href: '/services', active: current === 'Services' },
+      { label: 'Coverage', href: '/coverage?service=&pickup=', active: current === 'Coverage' },
+      { label: 'Why us', href: '/#why', active: current === 'Why us' },
+      { label: 'Pricing', href: '/pricing', active: current === 'Pricing' },
+      { label: 'FAQ', href: '/faq', active: current === 'FAQ' },
+      { label: 'Book', href: '/book', active: current === 'Book' },
+      { label: 'Contact', href: '/contact', active: current === 'Contact' }
+    ];
+  }
+  function state(stageClass, caption, headerProps) {
+    return h('div', { className: 'state' },
+      h('div', { className: stageClass }, h(S.SiteHeader, headerProps)),
+      h('p', { className: 'caption' }, caption)
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(React.Fragment, null,
+      state('stage stage-hero', 'Home (index.html): over the hero poster — logo link and "Why us" carry the active markers.', {
+        logoSrc: LOGO, logoAlt: 'Spoorlangs', homeHref: '/', homeLabel: 'Spoorlangs home', homeActive: true,
+        navLabel: 'Primary navigation', sectionsLabel: 'Page sections', items: items('Why us'),
+        quoteHref: '/quote?service=&pickup=', quoteLabel: 'Get a quote', quoteActive: false
+      }),
+      state('stage', 'Services (page-services.html): on asphalt — "Services" is the current route.', {
+        logoSrc: LOGO, logoAlt: 'Spoorlangs', homeHref: '/', homeLabel: 'Spoorlangs home', homeActive: false,
+        navLabel: 'Primary navigation', sectionsLabel: 'Page sections', items: items('Services'),
+        quoteHref: '/quote?service=&pickup=', quoteLabel: 'Get a quote', quoteActive: false
+      }),
+      state('stage', 'Quote (page-quote.html): "Get a quote" itself is the current route — active markers on the button.', {
+        logoSrc: LOGO, logoAlt: 'Spoorlangs', homeHref: '/', homeLabel: 'Spoorlangs home', homeActive: false,
+        navLabel: 'Primary navigation', sectionsLabel: 'Page sections', items: items(null),
+        quoteHref: '/quote?service=&pickup=', quoteLabel: 'Get a quote', quoteActive: true
+      })
+    )
+  );
+</script>
+</body>
+</html>

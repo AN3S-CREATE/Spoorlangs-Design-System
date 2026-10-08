@@ -1,0 +1,138 @@
+<!-- @dsCard group="Sections" height=3000 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LegalPage — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by bundle.css. */
+  .states { display: flex; flex-direction: column; gap: 24px; }
+  .state-notes { padding: 24px; display: flex; flex-direction: column; gap: 24px; max-width: 46rem; }
+  .state-label { font: 500 11px/1.5 var(--font-sans); color: var(--muted-foreground); margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  var mailDrive = function () { return h('a', { href: 'mailto:drive@spoorlangs.online' }, 'drive@spoorlangs.online'); };
+
+  /* Every string below is the site's own copy, verbatim from page-privacy.html / text/page-privacy.txt. */
+  var sections = [
+    {
+      heading: 'Who is responsible for your information',
+      contact: true,
+      blocks: [
+        h(React.Fragment, null,
+          'The responsible party is Spoorlangs (Pty) Ltd, a driver-powered vehicle delivery service based in Kempton Park and operating across Gauteng, South Africa. Privacy questions and requests are handled directly by the Spoorlangs owner, reachable on WhatsApp at +27 66 271 5887 or at ',
+          mailDrive(), '.')
+      ]
+    },
+    {
+      heading: 'What we collect',
+      blocks: [
+        'When you ask for a quote, we collect only the details needed to price and arrange that delivery:',
+        { ul: [
+          'Your name, contact number and email address',
+          'The service you need and your preferred date and time',
+          'The collection point and the delivery point',
+          'The vehicle make, model, and optionally the year and body type',
+          'Any notes you choose to add'
+        ] },
+        'We do not collect ID numbers, accounts or passwords, payment card details, or live location data, and we do not run advertising or analytics trackers on this website.'
+      ]
+    },
+    {
+      heading: 'Why we collect it',
+      blocks: [
+        'Your details are used for one purpose: to prepare, quote and arrange a vehicle delivery you asked for. The enquiry is initiated by you, and that request is the basis on which we process the information. We do not use your details for anything else, we do not add you to marketing lists, and we never sell or pass leads to other companies.'
+      ]
+    },
+    {
+      heading: 'How your details reach us',
+      blocks: [
+        'The booking form securely stores the details you submit so Spoorlangs can review and confirm your requested run. The quote form still lets you choose WhatsApp or your own email app. If you choose WhatsApp, your message is also processed by WhatsApp (Meta) under their own terms; if you choose email, it travels through your and our email providers.'
+      ]
+    },
+    {
+      heading: 'Who receives your information',
+      blocks: [
+        'Only the Spoorlangs owner and trusted service systems. Your details are not shared with any other company, broker or advertiser. The third parties involved are the communication services you choose to send through — WhatsApp or email — our secure website service, and the OpenStreetMap tile servers that draw the coverage map, as described below.'
+      ]
+    },
+    {
+      heading: 'How long we keep it',
+      blocks: [
+        'Quote messages and booking requests are kept for up to 24 months so we can answer follow-up questions and keep a record of the job, unless you ask us to remove them sooner. After that they are deleted.'
+      ]
+    },
+    {
+      heading: 'Your rights and choices',
+      blocks: [
+        'Under POPIA you may, at any time:',
+        { ul: [
+          'Ask to see the personal information we hold about you',
+          'Ask us to correct or update it',
+          'Ask us to delete it',
+          'Object to how it is being used'
+        ] },
+        h(React.Fragment, null,
+          'Message +27 66 271 5887 or email ', mailDrive(),
+          ' and we will action your request. If you believe your information has been mishandled, you also have the right to lodge a complaint with the Information Regulator (South Africa) at ',
+          h('a', { href: 'mailto:enquiries@inforegulator.org.za' }, 'enquiries@inforegulator.org.za'), '.')
+      ]
+    },
+    {
+      heading: 'Location information',
+      blocks: [
+        'The coverage areas shown on this site are the regions Spoorlangs drives in. They are not live locations of any driver, and we do not publish or store tracking history on this website. The coverage map itself is drawn with map tiles from OpenStreetMap; loading the map means your browser fetches those tile images from their servers, which is standard for any web map.'
+      ]
+    },
+    {
+      heading: 'Keeping your information safe',
+      blocks: [
+        'Access to quote messages and stored booking requests is limited to the Spoorlangs owner and trusted service systems. Public visitors cannot read booking records, and the booking form validates every field before saving it.'
+      ]
+    },
+    {
+      heading: 'Changes to this policy',
+      blocks: [
+        'If the way we handle personal information changes, this page will be updated with a new date above before the change takes effect.'
+      ]
+    }
+  ];
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'states' },
+
+      /* 1 — /privacy as served: main.quote-main (8rem top padding is the fixed header's space) > .site-shell.legal-page */
+      h(S.LegalPage, {
+        backHref: '/',
+        backLabel: 'Back to home',
+        eyebrow: 'POPIA',
+        title: 'Privacy policy',
+        intro: 'This policy explains how Spoorlangs (Pty) Ltd handles personal information under the Protection of Personal Information Act, 2013 (POPIA). It applies to this website and to quote requests sent to us by WhatsApp or email. Last updated: 15 September 2026.',
+        sections: sections
+      }),
+
+      /* 2 — .privacy-note, the form note this family also owns, as /quote and /book print it */
+      h('div', { className: 'state-notes' },
+        h('div', null,
+          h('div', { className: 'state-label' }, 'PrivacyNote under the quote form (/quote): muted, 3px orange left rule, orange underlined link.'),
+          h(S.PrivacyNote, null,
+            'This builds a WhatsApp message to Spoorlangs. Nothing is stored on this page. The email option opens your email app with the same details ready to send. Read the ',
+            h('a', { href: '/privacy' }, 'privacy notice'), '.')
+        ),
+        h('div', null,
+          h('div', { className: 'state-label' }, 'PrivacyNote under the booking form (/book).'),
+          h(S.PrivacyNote, null,
+            'Your request goes straight to Spoorlangs on WhatsApp, and your email app opens with a copy addressed to drive@spoorlangs.online. A booking is only confirmed once Spoorlangs contacts you. Read the ',
+            h('a', { href: '/privacy' }, 'privacy notice'), '.')
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

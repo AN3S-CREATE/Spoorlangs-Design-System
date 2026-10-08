@@ -1,0 +1,54 @@
+<!-- @dsCard group="Sections" height=660 width=1180 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AboutLayout — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by bundle.css. */
+  .ds-states { display:grid; gap:32px; padding:24px; background:var(--background); }
+  .ds-state-label { margin:0 0 8px; font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.55; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'ds-states' },
+      state('Home · #about with the legacy #nico anchor (site copy, verbatim)',
+        h(S.AboutLayout, {
+          eyebrow: 'About Spoorlangs',
+          title: 'Who we are',
+          body: 'Spoorlangs is owner-driven: Nico is the owner and first driver. Overflow is handled by vetted freelancers on the same SLA. This is not a call centre, and the contracting party is always Spoorlangs.'
+        })
+      ),
+      state('Brand Book p03 · SHORT BIO (own id, no legacy anchor)',
+        h(S.AboutLayout, {
+          id: 'owner',
+          anchorId: null,
+          eyebrow: 'OWNER · NICO STRYDOM',
+          title: 'SHORT BIO',
+          body: 'Nico Strydom is the owner and first driver of Spoorlangs, with 8+ years in the on-wheels industry.'
+        })
+      ),
+      state('Brand Book p03 · LONG BIO (the 50rem paragraph cap wrapping; headingId set)',
+        h(S.AboutLayout, {
+          id: 'owner-long',
+          anchorId: null,
+          headingId: 'owner-long-title',
+          eyebrow: 'OWNER · NICO STRYDOM',
+          title: 'LONG BIO',
+          body: 'Nico Strydom is the owner and first driver of Spoorlangs. With 8+ years in the on-wheels industry, he handles quotes, collections, deliveries and client WhatsApp himself. For bigger or overflow jobs he brings in trusted freelancers who work to the same SLA, runner-only rule and proof-of-delivery standard — so clients deal with one accountable owner, not a faceless dispatch queue.'
+        })
+      )
+    )
+  );
+</script>
+</body>
+</html>

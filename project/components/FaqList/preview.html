@@ -1,0 +1,79 @@
+<!-- @dsCard group="Content" height=1900 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FaqList — preview</title>
+<style>
+  /* layout of the states only — the component is styled by tokens.css + bundle.css */
+  #root { display: grid; gap: 32px; padding: 24px; }
+  .ds-state-label { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  function state(label, child) {
+    return h('div', null, h('p', { className: 'ds-state-label' }, label), child);
+  }
+
+  /* Home page — index.html #faq, the 11 rows verbatim. */
+  var homeItems = [
+    { question: 'What do you deliver?', answer: 'Runners only — vehicles that start and drive. Not tows, trailers, or non-runners.' },
+    { question: 'Where do you operate?', answer: 'Live coverage: Johannesburg and Greater Gauteng. Nationwide is our direction, not a live branch list.' },
+    { question: 'How do I book?', answer: 'WhatsApp +27 66 271 5887 with the collect pin, deliver pin, window, and vehicle notes. Or use the quote form.' },
+    { question: 'What is included?', answer: 'The agreed slot, an on-wheels driver, a live pin on request, and Proof of Delivery on handover.' },
+    { question: 'Are rates VAT-inclusive?', answer: 'No. All published guide rates exclude VAT. Pin-to-pin pricing is confirmed on the quote.' },
+    { question: 'What should I know about vehicle cover?', answer: 'Ask Spoorlangs for the current cover status and applicable terms before booking. We confirm what applies to the requested run without making unsupported blanket claims.' },
+    { question: 'Can you do Cape Town or a long-haul truck lane?', answer: 'No. We decline Cape Town truck lanes and similar long-haul work so we keep the Gauteng promise.' },
+    { question: 'Who drives?', answer: 'This is an owner-led operation; overflow is handled by vetted freelancers on the same SLA. The contracting party is always Spoorlangs.' },
+    { question: 'When can I message Spoorlangs?', answer: 'Message any time. Nico replies from 07:30, and we confirm your window.' },
+    { question: 'How does POD work?', answer: 'POD is Proof of Delivery. The job is closed when you have proof of delivery, not when we say so.', open: true },
+    { question: 'What about after-hours or Sunday runs?', answer: 'After-hours / Sunday = named rate. The rate and service window are confirmed on your quote.' }
+  ];
+
+  /* /faq — page-faq.html, the "Coverage and availability" group verbatim. */
+  var coverageItems = [
+    { question: 'Where do you operate?', answer: 'Live coverage is Johannesburg and Greater Gauteng, based in Kempton Park. Nationwide is our direction, not a live branch list — for anything outside Gauteng, WhatsApp us and we will tell you honestly whether we can help.', open: true },
+    { question: 'When can I message Spoorlangs?', answer: 'Message any time on WhatsApp. Nico replies from 07:30, and we confirm your window.' },
+    { question: 'What about after-hours or Sunday runs?', answer: 'After-hours and Sunday runs are a named service with their own rate. The rate and service window are confirmed on your quote.' },
+    { question: 'Who drives my vehicle?', answer: 'This is an owner-led operation — Nico is the first driver. Overflow is handled by vetted freelancers on the same service level. The contracting party is always Spoorlangs (Pty) Ltd.' }
+  ];
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(React.Fragment, null,
+      state('FaqSection · home #faq — eyebrow, h2, .faq-sub, 11 rows ("How does POD work?" open), footer link',
+        h(S.FaqSection, {
+          eyebrow: 'Straight answers',
+          title: 'Before the wheels turn.',
+          sub: 'WhatsApp us for anything not covered here.',
+          items: homeItems,
+          link: { href: '/pricing', label: 'See the guide rates' }
+        })
+      ),
+      state('FaqGroup + FaqCta · /faq — .faq-section-page with h2.faq-group-heading, then the closing .faq-cta',
+        h('div', { className: 'site-shell' },
+          h(S.FaqGroup, { heading: 'Coverage and availability', items: coverageItems }),
+          h(S.FaqCta, {
+            lead: 'Still unsure? Send the collect pin, deliver pin and vehicle notes — we will confirm what is possible.',
+            primary: { href: '/pricing', label: 'See guide rates' },
+            whatsapp: { label: 'Ask on WhatsApp' }
+          })
+        )
+      ),
+      state('FaqCta · /pricing — same block, the pricing page\'s lead and "Get a quote"',
+        h('div', { className: 'site-shell' },
+          h(S.FaqCta, {
+            lead: 'Send the collect pin, deliver pin and vehicle notes — we confirm the exact rate on your quote.',
+            primary: { href: '/quote?service=&pickup=', label: 'Get a quote' },
+            whatsapp: { label: 'Ask on WhatsApp' }
+          })
+        )
+      )
+    )
+  );
+</script>
+</body>
+</html>

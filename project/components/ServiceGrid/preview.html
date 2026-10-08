@@ -1,0 +1,54 @@
+<!-- @dsCard group="Content" height=1160 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ServiceGrid — preview</title>
+<style>
+  /* layout of the states only — the component is styled by bundle.css */
+  body { margin:0; padding:24px; background:var(--background); }
+  .sg-states { display:grid; gap:32px; }
+  .sg-caption { margin:0 0 8px; font:500 12px/1.5 var(--font-sans); color:var(--muted-foreground); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+
+  /* The six home-page cards, copy verbatim from index.html (#services). */
+  var items = [
+    { service: 'same-day',    title: 'Same-day',    copy: 'Book before 10am for same-day Gauteng runners' },
+    { service: 'auction',     title: 'Auction',     copy: 'Lift from the sale floor once the pin is locked' },
+    { service: 'after-hours', title: 'After-hours', copy: 'Named after-hours / Sunday rate' },
+    { service: 'fleet',       title: 'Fleet',       copy: 'Multi-unit dealer and fleet moves, same SLA' },
+    { service: 'live-pin',    title: 'Live pin',    copy: 'Collect and drop pins confirmed on the quote' },
+    { service: 'pod',         title: 'POD',         copy: 'Proof of delivery closes the job' }
+  ];
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', { className: 'sg-states' },
+      h('div', null,
+        h('p', { className: 'sg-caption' }, 'ServiceGrid'),
+        h(S.ServiceGrid, { items: items })
+      ),
+      h('div', null,
+        h('p', { className: 'sg-caption' }, 'ServicesSection (home page #services)'),
+        h(S.ServicesSection, {
+          id: 'services',
+          headingId: 'services-title',
+          eyebrow: 'Gauteng on-wheels',
+          title: 'Six ways to keep moving.',
+          lead: 'Professional vehicle relocation for runners — powered by people, not trucks or trailers.',
+          items: items,
+          visual: {
+            src: '/_blob/59bd9abb8241448aa7fa154999aece52',
+            alt: 'Spoorlangs same-day on-wheels delivery services'
+          }
+        })
+      )
+    )
+  );
+</script>
+</body>
+</html>

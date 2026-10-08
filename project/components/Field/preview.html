@@ -1,0 +1,72 @@
+<!-- @dsCard group="Forms" height=1600 width=760 -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Field — preview</title>
+<style>
+  /* Layout of the states only — the component is styled by bundle.css. */
+  #root { padding: 24px; display: flex; flex-direction: column; gap: 24px; }
+  .state { display: flex; flex-direction: column; gap: 8px; }
+  .state > small { color: var(--muted-foreground); font-size: 12px; }
+  /* The site's own container for fields (<form class="quote-form">, QuoteForm family); the grid columns are
+     restated here with the site's values so the two-column layout holds even before that family loads. */
+  .preview-grid { display: grid; gap: 1.1rem; }
+  @media (width>=640px) { .preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 1.25rem; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  var S = window.Spoorlangs, h = React.createElement;
+  var stop = function (event) { event.preventDefault(); };
+  var state = function (caption, children) {
+    return h('div', { className: 'state' },
+      h('small', null, caption),
+      h('form', { className: 'quote-form preview-grid', noValidate: true, onSubmit: stop }, children));
+  };
+  var services = [
+    { value: 'same-day', label: 'Same-day' }, { value: 'auction', label: 'Auction' },
+    { value: 'after-hours', label: 'After-hours' }, { value: 'fleet', label: 'Fleet' },
+    { value: 'live-pin', label: 'Live pin' }, { value: 'pod', label: 'POD' }
+  ];
+  var vehicleTypes = [
+    { value: '', label: 'Choose…', disabled: true, selected: true },
+    'sedan', 'hatchback', 'suv', 'bakkie', 'van', 'other'
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    state('.field — input, select, placeholder, type="date", inputMode="tel", disabled "Choose…" row, .field-wide email, textarea (page-quote / page-coverage)', [
+      h(S.Field, { key: 'pickup', id: 'pickup', label: 'Collection point' }),
+      h(S.Field, { key: 'service', id: 'service_type', label: 'Service', control: 'select', options: services }),
+      h(S.Field, { key: 'window', id: 'preferred_window', label: 'Preferred date and time (optional)', placeholder: 'e.g. Thursday morning or asap', validated: false }),
+      h(S.Field, { key: 'date', id: 'requested_date', label: 'Preferred date', type: 'date' }),
+      h(S.Field, { key: 'phone', id: 'phone', label: 'Phone number', inputMode: 'tel', autoComplete: 'tel', placeholder: '+27821234567' }),
+      h(S.Field, { key: 'type', id: 'vehicle_type', label: 'Vehicle type', control: 'select', options: vehicleTypes, validated: false }),
+      h(S.Field, { key: 'email', id: 'email', label: 'Email address', type: 'email', autoComplete: 'email', wide: true }),
+      h(S.Field, { key: 'notes', id: 'notes', label: 'Anything else? (optional)', control: 'textarea', rows: 4, maxLength: 500, wide: true })
+    ]),
+    state('error — <span role="alert"> + aria-invalid="true" (messages verbatim from the site\'s quote-schema chunk)', [
+      h(S.Field, { key: 'dropoff', id: 'dropoff', label: 'Delivery point', defaultValue: 'Kp', error: 'Where should the vehicle be delivered?' }),
+      h(S.Field, { key: 'phone', id: 'phone_error', name: 'phone', label: 'Contact number', inputMode: 'tel', autoComplete: 'tel', error: 'Please enter a contact number.' })
+    ]),
+    state('consent — .consent-field (page-quote; page-coverage with validated:false) and the book page\'s utility-class variant; consent error', [
+      h(S.ConsentField, { key: 'quote', id: 'consent' },
+        'I agree that Spoorlangs may use these details to contact me about this quote, as set out in the ',
+        h('a', { href: '/privacy' }, 'privacy notice'), '.'),
+      h(S.ConsentField, { key: 'coverage', id: 'booking-consent', validated: false },
+        'I agree that Spoorlangs may store and use these details to review and respond to this booking request, as set out in the ',
+        h('a', { href: '/privacy' }, 'privacy policy'), '.'),
+      h(S.ConsentField, { key: 'book', utilities: true },
+        'I agree that Spoorlangs may use these details to arrange this run.'),
+      h(S.ConsentField, { key: 'error', id: 'consent_error', error: 'Please tick the box so we may use your details to reply.' },
+        'I agree that Spoorlangs may use these details to contact me about this quote, as set out in the ',
+        h('a', { href: '/privacy' }, 'privacy notice'), '.')
+    ]),
+    state('form level — .form-error and .quote-confirmation (markup not in the source pack: element names system-given; sample copy is the site\'s own, from quote-schema and the coverage intro)', [
+      h('div', { key: 'err', className: 'field-wide' }, h(S.FormError, { role: 'alert' }, 'Please enter your name.')),
+      h(S.QuoteConfirmation, { key: 'ok' }, 'Submitting this form creates a pending request. The run is booked only after Spoorlangs confirms it with you.')
+    ])
+  ));
+</script>
+</body>
+</html>
