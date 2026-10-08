@@ -18,7 +18,7 @@ Phase 4: Published. The system (tokens, README + content.md + website.md, 4 asse
 ## Open Questions & Areas Needing Investigation
 - Q1 (answered 2026-10-08): no vector logo exists anywhere — Brand Book p09/p28 lists "Vector logo masters (SVG / PDF)" as open decision 05. The approved set is 13 PNGs (14 Sep 2026) at `C:\Users\creat\Downloads\Spoorlangs Logo\` / `D:\Work\Repositories\Spoorlangs\Branding\Spoorlangs Logo.zip`; all on solid black or white; Monochrome Black held back (misspelled).
 - Q2: light theme — the book's open decision 01 ("Light / print version of this book for long documents?") is unresolved; the site is dark-only. The system stays single-theme and flags it.
-- Q3 (for Andries): web address (book: spoorlangs.lovable.app until the switch is confirmed; site live at spoorlangs.online) and email (site drive@spoorlangs.online; book names spoorlangs.co.za as email domain, its field is corrupted).
+- Q3 (answered 2026-10-08 by Andries Liebenberg): the domain is spoorlangs.online for email and web (drive@spoorlangs.online, https://spoorlangs.online). Supersedes Brand Book p25 (spoorlangs.co.za email domain, spoorlangs.lovable.app web line) and settles open decision 04. Recorded as decision 16.
 - Q4 (for Andries): the brand faces (Bebas Neue / Inter) are not on the site, which uses the alternates (Oswald / Montserrat). Should the web move to the primaries?
 
 ## Sources on record

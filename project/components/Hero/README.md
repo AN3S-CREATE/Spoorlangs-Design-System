@@ -16,4 +16,4 @@ Full-viewport photo hero: the locked look-M poster under a gradient `.hero-shade
 
 **States:** none of its own; links as in Button. ≥640px: centred, image at 54%. ≤639px: bottom-aligned, image at 68%, vertical shade, h1 `clamp(4rem,20vw,5.5rem)`, actions stacked.
 
-**Gaps (not in source):** no video variant (poster only; p21 mp4 in Motion); `.hero-picture` unused. For Andries Liebenberg: fonts (site Oswald/Montserrat; p16 Bebas Neue/Inter); email (site drive@spoorlangs.online; p25 names spoorlangs.co.za).
+**Gaps (not in source):** no video variant (poster only; p21 mp4 in Motion); `.hero-picture` unused. For Andries Liebenberg: fonts (site Oswald/Montserrat; p16 Bebas Neue/Inter). Settled 2026-10-08: email drive@spoorlangs.online, as the site has it.

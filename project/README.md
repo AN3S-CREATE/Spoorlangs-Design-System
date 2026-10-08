@@ -1,5 +1,7 @@
 Spoorlangs is "South Africa's premium driver-powered vehicle delivery network." (Brand Book p03): it collects and delivers runners — "vehicles that start and drive" — across Johannesburg and Greater Gauteng from Kempton Park, owner-driven by Nico Strydom. Identity: Asphalt Black ground, Ignition Orange only as the signal ("orange = motion · metallic = premium · black = stability", p15), Titanium Silver metallic type, the speedometer arc with its orange red-zone, and poster-caps display headings — "clean · fast · premium · confident · South African · automotive-grade." (p06). The Brand Book v1.0 (8 Oct 2026) owns identity and words; the live site spoorlangs.online owns the web implementation; where they disagree, §9 records both for Andries Liebenberg to settle — never choose silently.
 
+**Domain (settled by Andries Liebenberg, 2026-10-08):** use spoorlangs.online for both email and web: `drive@spoorlangs.online` and `https://spoorlangs.online`. Never print `spoorlangs.co.za` or `spoorlangs.lovable.app`; the Brand Book p25 lines that name them are superseded.
+
 **Never publish (p25):** "A street line or "123 Main Road" · +27 11 555 0101 · "[email protected]" (an example address, obfuscated on the page) · invented trading hours · walk-in or workshop claims."
 
 **Pricing presentation (p24):** "Always say "excl. VAT" and "guide" — final price on quote · Format: R1 350 (space as thousands separator) · Never "from R…" without the zone and band".
@@ -148,8 +150,8 @@ Most broken hard rules: the approved logo file only — never "redraw, retype or
 | # Topic | Brand Book | Site |
 |---|---|---|
 | 1 Fonts | Bebas Neue / Inter (p16) | Oswald / Montserrat |
-| 2 Web address | spoorlangs.lovable.app (p25) | spoorlangs.online |
-| 3 Email | corrupted field; .co.za "email domain only" (p25) | drive@spoorlangs.online; `contact-cta.png` says .co.za |
+| 2 Web address — **settled 2026-10-08: spoorlangs.online** | spoorlangs.lovable.app (p25, superseded) | spoorlangs.online |
+| 3 Email — **settled 2026-10-08: drive@spoorlangs.online** | corrupted field; .co.za "email domain only" (p25, superseded) | drive@spoorlangs.online; `contact-cta.png` still prints .co.za |
 | 4 Transitions | "200–400 ms", ease-out (p21) | `.2s`, no easing |
 | 5 Icons | 1.5 px, orange highlight (p20) | lucide 2 px, single ink |
 | 6 Hours line | no "invented trading hours" (p25) | "Nico replies from 07:30" |
@@ -176,6 +178,6 @@ Most broken hard rules: the approved logo file only — never "redraw, retype or
 
 ## 10. Known gaps and open decisions
 
-Open decisions (p28): "01 Light / print version of this book for long documents? · 02 CMYK and Pantone values for cards and banners? · 03 Afrikaans edition? · 04 Switch the web address to spoorlangs.online? · 05 Vector logo masters (SVG / PDF) + redraw Monochrome Black · 06 Real photography — APPROVED Oct 2026 (Photo Shoot Brief) · 07 Logo animation — DONE Oct 2026 (Logo Animation design)".
+Open decisions (p28): "01 Light / print version of this book for long documents? · 02 CMYK and Pantone values for cards and banners? · 03 Afrikaans edition? · 04 Switch the web address to spoorlangs.online? · 05 Vector logo masters (SVG / PDF) + redraw Monochrome Black · 06 Real photography — APPROVED Oct 2026 (Photo Shoot Brief) · 07 Logo animation — DONE Oct 2026 (Logo Animation design)". Decision 04 is settled: spoorlangs.online, for the web address and the email domain (Andries Liebenberg, 2026-10-08).
 
 Not in source: vector or transparent logo; white cut-out for orange; titanium one-colour mark for the polo; Bebas Neue weight and kicker tracking; book icon artwork; a light theme; status colours beyond orange; quote-sent and booking-sent copy; rates for "Luxury & classic" or outside the three zones; cancellation and payment figures; awards, client logos, testimonials ("none on file", p28); templates "NOT BUILT YET: Proposal · report · invoice template · event signage · social master in Canva" (p27).

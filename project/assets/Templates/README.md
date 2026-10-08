@@ -33,12 +33,12 @@ The four 1080 × 1080 squares share one pattern:
 | `wave1-03-contact.png` | "Spoorlangs - Wave1 post 03 Contact" · [edit](https://www.canva.com/d/CMvGFl0zrHh3L1p) | 2048² | contact card | do-not-reuse | AI lockup; amber footer; p25 block |
 | `wave1-05-fleet.png` | "Spoorlangs - Wave1 post 05 Fleet" · [edit](https://www.canva.com/d/tw_F8gGoAUVPBv8) | 2048² | "FLEET COLLECTIONS" | do-not-reuse | AI lockup reads "POORLANGS"; panel van |
 | `delivery-post-live-delivery.png` | "Spoorlangs - Delivery post" · [edit](https://www.canva.com/d/K7vwQXws4Htk4H7) | 2048² | "SAME-DAY. / ON WHEELS." | fix-before-reuse | replace band (drift marks); Bebas headline; pill CTA |
-| `story-quote.png` | "Spoorlangs - Story quote" · [edit](https://www.canva.com/d/qYKpCQVWuYAb97k) | 1080×1920 | tagline pull-quote | fix-before-reuse | logo on flat black; stray lines; pill CTA |
+| `story-quote.png` | "Spoorlangs - Story quote" · [edit](https://www.canva.com/d/qYKpCQVWuYAb97k) | 1080×1920 | tagline pull-quote | fix-before-reuse | email → drive@spoorlangs.online; logo on flat black; stray lines; pill CTA |
 | `edge-to-edge-delivery.png` | "Spoorlangs Edge-to-Edge Delivery Image" · [edit](https://www.canva.com/d/KIUdWrz8e5nWZkc) | 1080×1350 | light-trail post | do-not-reuse | typed wordmark; #FE4D00; "RUNNERSRunners" |
 | `instagram-launch-post.png` | "Instagram Post - Spoorlangs Launch" · [edit](https://www.canva.com/d/BlZAFa5hOvulhld) | 1080×1350 | stars, handover cards | do-not-reuse | delete stars; approved lockup; clipped band |
-| `email-signature-launch.png` | "Spoorlangs - Email signature" · [edit](https://www.canva.com/d/TzAQC9O5Wicc_A5) | 720×420 | signature sheet | fix-before-reuse | orange on white 2.61:1 (p26); Horizontal lockup (p10); 16 px copy; p25 block |
-| `wa-qr-status-story.png` | "Spoorlangs - QR status story" · [edit](https://www.canva.com/d/ZTFAjkT3V8WWkrc) | 1080×1920 | QR to WhatsApp | fix-before-reuse | gate label; masthead; pill CTA |
-| `wa-rate-card-square.png` | "Spoorlangs - Rate card square" · [edit](https://www.canva.com/d/ZMY6J4iDqEokMYL) | 1080² | p24 rate table | fix-before-reuse | "Local (under 25 km)"; "agreed SLA"; logo ground |
+| `email-signature-launch.png` | "Spoorlangs - Email signature" · [edit](https://www.canva.com/d/TzAQC9O5Wicc_A5) | 720×420 | signature sheet | fix-before-reuse | email → drive@spoorlangs.online; orange on white 2.61:1 (p26); Horizontal lockup (p10); 16 px copy; p25 block |
+| `wa-qr-status-story.png` | "Spoorlangs - QR status story" · [edit](https://www.canva.com/d/ZTFAjkT3V8WWkrc) | 1080×1920 | QR to WhatsApp | fix-before-reuse | email → drive@spoorlangs.online; gate label; masthead; pill CTA |
+| `wa-rate-card-square.png` | "Spoorlangs - Rate card square" · [edit](https://www.canva.com/d/ZMY6J4iDqEokMYL) | 1080² | p24 rate table | fix-before-reuse | email → drive@spoorlangs.online; "Local (under 25 km)"; "agreed SLA"; logo ground |
 
 ## Do not reuse / fix first
 
@@ -46,6 +46,7 @@ The four 1080 × 1080 squares share one pattern:
 - **Fake stats** — p27 "no fake stats"; p28 "testimonials: none on file": `instagram-launch-post` five stars; `wave1-02` "8+ YEARS." unattributed (p03).
 - **Imagery** — p19 DON'T "Racing as content, burnouts, track days", "Courier, trucking or car-transporter visuals"; brief "No stock or AI-generated images": `delivery-post`, `wave1-01/02/05`, `edge-to-edge` — concept until the real shoot.
 - **Palette and contrast** — p14/p15: amber on `wave1-01/02/03` (≈ superseded #E8A317), #FE4D00 on `edge-to-edge`, navy ground on `wave1-02`; p26 "White on Ignition 2.6:1 Fail — avoid": `email-signature`, `edge-to-edge` body on the trail.
+- **Contact domain** — settled 2026-10-08: spoorlangs.online for email and web. `email-signature-launch`, `story-quote`, `wa-qr-status-story` and `wa-rate-card-square` print "drive@spoorlangs.co.za"; change it to "drive@spoorlangs.online".
 - **Pricing copy** — p24: "Local (<25 km)" and "miss written SLA" for "Local (under 25 km)" and "miss the agreed SLA".
 - **Logo ground and clear space** — p11/p12: the file's black box on `social-trust`, `social-service-cta`, `story-quote`, `wa-rate-card`; `icon-only.png` uncropped on `social-nico-factor`; text or chrome inside the box on `social-trust`, `behind-the-wheel`, `service-cta`, `wave1-03/05`.
 
@@ -57,7 +58,7 @@ No stored file: an HTML render of the WhatsApp rate card (same content as `wa-ra
 
 ## Discrepancies for Andries Liebenberg
 
-1. **Email domain** — kit pieces print "drive@spoorlangs.co.za" (p25); the site publishes drive@spoorlangs.online (§9 row 3).
+1. **Email domain — settled 2026-10-08: spoorlangs.online.** Replace "drive@spoorlangs.co.za" with "drive@spoorlangs.online" on `email-signature-launch`, `story-quote`, `wa-qr-status-story`, `wa-rate-card-square` and the HTML rate card.
 2. **Rate format** — the HTML card writes "R 950"; p24 and the PNG write "R950" / "R1 350".
 3. **Button case** — the Service CTA button is sentence case; the kit's are caps ("GET A QUOTE ON WHATSAPP"); p08 microcopy is "Get a quote on WhatsApp".
 4. **Tagline case** — p08 says "title case with full stops" yet prints it in caps; five pieces set "DRIVEN BY PEOPLE. FURTHER TOGETHER."

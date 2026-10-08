@@ -17,4 +17,4 @@ Photo contact band: the contact-cta photograph under a left-to-right Asphalt Bla
 
 **States:** none of its own; links as Button (hover lifts 2px; primary turns Burnt Copper, white label 3.81:1 — flagged); focus is Base's orange outline. Without `color-mix` the scrim is solid `--background`.
 
-**Gaps — for Andries Liebenberg:** no mobile image position or `.section` padding in source. Mail label bare, "WhatsApp us" in a `<span>` — site quirk kept. Hours: site "Nico replies from 07:30" vs p25 "invented trading hours" — kept. Email: site drive@spoorlangs.online; p25 names spoorlangs.co.za. Fonts: site Oswald/Montserrat; p16 Bebas Neue/Inter.
+**Gaps — for Andries Liebenberg:** no mobile image position or `.section` padding in source. Mail label bare, "WhatsApp us" in a `<span>` — site quirk kept. Hours: site "Nico replies from 07:30" vs p25 "invented trading hours" — kept. Email settled 2026-10-08: drive@spoorlangs.online, as the site has it. Fonts: site Oswald/Montserrat; p16 Bebas Neue/Inter.

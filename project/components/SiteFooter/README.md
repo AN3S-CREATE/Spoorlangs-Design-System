@@ -12,4 +12,4 @@ Orange top-rule footer with monochrome logo, tagline, location, contact lines an
 
 **States:** `.footer-contact a:hover` → `--orange`; `.footer-meta a` has no hover rule; the active link is unstyled; focus is Base's `:focus-visible`.
 
-**Gaps — for Andries Liebenberg:** email — site `drive@spoorlangs.online`; book p25 names `spoorlangs.co.za` as the email domain. Web — book p25 `spoorlangs.lovable.app` "until Andries confirms the switch"; the site is live at spoorlangs.online. The hours line is the site's own; book p25 forbids "invented trading hours". `--font-display` is Oswald; the book's primary is Bebas Neue (p16).
+**Settled 2026-10-08:** email `drive@spoorlangs.online` and web spoorlangs.online, as the footer has them (supersedes book p25's `spoorlangs.co.za` and `spoorlangs.lovable.app`). **Gaps — for Andries Liebenberg:** the hours line is the site's own; book p25 forbids "invented trading hours". `--font-display` is Oswald; the book's primary is Bebas Neue (p16).
