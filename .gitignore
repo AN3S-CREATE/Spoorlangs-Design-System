@@ -11,3 +11,6 @@ tmp/
 
 # Node, if tooling is ever added here
 node_modules/
+
+# Canva connector export dumps (numbered folders) must never be committed
+/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*/
