@@ -135,6 +135,14 @@ See `components/<Name>/README.md`.
 - ContactCards — Tailwind cards on /contact.
 - IgnitionRule — Intentional addition: the book's "Ignition rule 96 × 5 px under headings" (p22) has no web implementation; this supplies one.
 
+## Templates in use
+
+Brand Book p27 lists the templates in use — "Website · WhatsApp kit · rate card · Email signature · Letterhead A4 · A5 leave-behind · Business card · Runner ID · Vehicle branding (target) · Workwear polo" — and "NOT BUILT YET: Proposal · report · invoice template · event signage · social master in Canva". The stored exports — four social squares, four wave-1 posts, the delivery post, a story, two portrait posts, the email-signature sheet, the WhatsApp QR story and rate card, exported 2026-10-08 — live in `assets/Templates/` with Canva edit links; edit in Canva, re-export, replace the file.
+
+The four squares share one pattern: `main-full-dark.png` top-left on `asphalt-black` (each export adds an off-palette orange glow, #261000–#462100); an `ignition-orange` `brand-kicker` in caps (untracked in the exports; on two squares it is the Canva design name); a two-line `brand-display` (Bebas Neue caps) headline at ≈85–93 px, line 1 `white`, line 2 `ignition-orange`; a `brand-lead` in `titanium-silver` sentence case; cards or chips with #101010–#141414 fills and 1–2 px hairlines or outlines; a full-width 3–5 px `ignition-orange` rule over a #080808 footer band carrying "Driven By People. Further Together." (`titanium-silver`) and "WhatsApp +27 66 271 5887" (`white`). The book has no social spec (p27: "social master in Canva" is NOT BUILT YET); recommended for that master: one wordmark-S height clear around the lockup (p11), a tracked-caps kicker (p17), unfilled `radius-card` cards with a `hairline` in `steel-grey` or `titanium-silver` (p22), a 5 px `ignition-rule-height` rule, and the band in `asphalt-black` (`accent-4` is the site's border-left token, not a book value).
+
+Most broken hard rules: the approved logo file only — never "redraw, retype or AI-generate the wordmark" (p13; seven pieces, plus story-quote's typeset sign-off — unclear) — and "no fake stats" (p27; the Instagram post's five stars). Verdicts, fixes, open questions: `assets/Templates/README.md`.
+
 ## 9. Discrepancies for Andries Liebenberg to settle
 
 | # Topic | Brand Book | Site |
