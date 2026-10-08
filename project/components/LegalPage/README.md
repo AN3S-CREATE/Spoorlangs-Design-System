@@ -18,6 +18,6 @@ Reading column for the privacy page: uppercase h2s, titanium paragraphs, bullets
 
 **States:** links `--orange` underlined; back link orange-underlined and eyebrow `--titanium` here (`.legal-page a`/`.legal-page p` outrank them — source quirk, kept); focus from Base `:focus-visible`; no hover or breakpoint rules.
 
-**Settled 2026-10-08:** email `drive@spoorlangs.online` and web spoorlangs.online, as the site has them (supersedes book p25's `spoorlangs.co.za` and `spoorlangs.lovable.app`). **Flags for Andries Liebenberg:** type — site Oswald/Montserrat, book Bebas Neue/Inter.
+**Settled 2026-10-08:** email `drive@spoorlangs.online` and web spoorlangs.online — the site and book p25 now agree. **Flags for Andries Liebenberg:** type — site Oswald/Montserrat, book Bebas Neue/Inter.
 
 **Gaps (not in source):** no h3, contents list, terms page, light/print variant or Afrikaans edition (book open decision 03).
