@@ -18,7 +18,9 @@ project/  ───────────────────────�
   tokens.json          color (1 theme) · type (2 fonts, 2 families) · spacing   │ published as-is to
                        · radius · shadow — list format the artifact page reads  │ https://claude.ai/artifact/7nj8ka81Ne5UvSpfNXk2Uo
   fonts/               Montserrat + Oswald variable latin woff2                 │ (root = this folder,
-  assets/Logos|Icons|Imagery/  uploads (blob ids in design-system.json)         │  files = project/**)
+  assets/<Group>/      uploads (blob ids in design-system.json): Logos, Icons,  │  files = project/**)
+                       Imagery, Motion, Templates, WA Kits, Covers, Print,      │
+                       Pitch deck — one README.md per group                     │
   components/          bundle.js (window.Spoorlangs), bundle.css, index.d.ts,   │
                        lib/react*.js, <Comp>/README.md + preview.html, Cover/   │
   design-system.json   the artifact index: title, libraries, assetGroups        │
@@ -30,7 +32,8 @@ project/  ───────────────────────�
 - `tokens.json` is the single source of every colour, length and shadow. The artifact page compiles it to `tokens.css` (`--name` custom properties plus a `.style` class per type style); `bundle.css` references those `var(--name)`s and keeps literal values only where the site had no variable.
 - `bundle.js` is one classic script: an IIFE reading `window.React`/`window.ReactDOM` (React 18.3.1 in `components/lib/`) and assigning `window.Spoorlangs = { Button, … }`. Components render the site's exact markup and class names, so `bundle.css` (copied verbatim from the site's component CSS) styles them unchanged.
 - Each `components/<Comp>/preview.html` is a complete small document; the artifact frame preloads tokens.css, fonts, bundle.css, the libraries and bundle.js, then runs the preview's one inline script. `components/Cover/preview.html` is the system's cover (palette blocks + pattern + name), kept bare (no README beside it).
-- Assets under `assets/<Group>/` are uploads; `design-system.json` records each as `assetGroups.<Group>.files.<name> = {name, blob, size, type}`. Previews reference them as `/_blob/<id>`.
+- Assets under `assets/<Group>/` are uploads; `design-system.json` records each as `assetGroups.<Group>.files.<name> = {name, blob, size, type}`. Previews reference them as `/_blob/<id>`. A replaced file gets a new upload and a new blob id: swap it in the index and in any preview that hard-codes the old id (only `ContactBand/preview.html` does, for `contact-cta.png`).
+- Canva-sourced groups (Templates, WA Kits, Covers, Print, Pitch deck) mirror Canva folders: each file records its Canva design id and edit link in its group README, with a Brand Book verdict. Re-sync = export again, compare pixels with the stored file, replace only what changed. Nothing is stored that prints a domain or email address other than spoorlangs.online / `drive@spoorlangs.online` (decision 17).
 - `README.md` plus `assets/<Group>/README.md` are the only prose a consuming agent needs; component READMEs state what the consumer provides.
 
 ## Constraints and conventions

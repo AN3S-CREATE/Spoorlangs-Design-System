@@ -17,6 +17,7 @@ It lives in two places that hold the same files:
 | `project/assets/Logos/` | The logo files the site ships (PNG only — no vector logo exists) |
 | `project/assets/Icons/` | The lucide line icons the site uses (ISC) |
 | `project/assets/Imagery/` | The site's photographs |
+| `project/assets/Templates/`, `WA Kits/`, `Covers/`, `Print/`, `Pitch deck/` | Exports of the brand's own Canva designs (launch set, WhatsApp updates, covers, stationery and workwear, dealer pitch), each with its Canva edit link and a Brand Book verdict in the group's README |
 | `project/components/` | `bundle.js` (React 18, `window.Spoorlangs`), `bundle.css`, `index.d.ts`, and per component a `README.md` + live `preview.html`; `Cover/` is the system's cover |
 | `project/design-system.json` | The artifact's index (title, libraries, asset records) |
 | `.index/` | Project context index for agents (see its README) |
