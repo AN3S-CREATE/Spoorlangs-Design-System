@@ -1,6 +1,8 @@
 Spoorlangs is "South Africa's premium driver-powered vehicle delivery network." (Brand Book p03): it collects and delivers runners — "vehicles that start and drive" — across Johannesburg and Greater Gauteng from Kempton Park, owner-driven by Nico Strydom. Identity: Asphalt Black ground, Ignition Orange only as the signal ("orange = motion · metallic = premium · black = stability", p15), Titanium Silver metallic type, the speedometer arc with its orange red-zone, and poster-caps display headings — "clean · fast · premium · confident · South African · automotive-grade." (p06). The Brand Book v1.0 (8 Oct 2026) owns identity and words; the live site spoorlangs.online owns the web implementation; where they disagree, §9 records both for Andries Liebenberg to settle — never choose silently.
 
-**Never publish (p25):** "A street line or "123 Main Road" · +27 11 555 0101 · "[email protected]" (an example address, obfuscated on the page) · invented trading hours · walk-in or workshop claims."
+**Domain (p25):** use spoorlangs.online for both email and web: `drive@spoorlangs.online` and `https://spoorlangs.online`. The book: "Web is spoorlangs.online (https://spoorlangs.online). Locked by Andries 2026-10-08." · "Email is drive@spoorlangs.online. No other domain or email address is ever shown." Never print `spoorlangs.co.za` or `spoorlangs.lovable.app`.
+
+**Never publish (p25):** "A street line or "123 Main Road" · +27 11 555 0101 · any other email address · invented trading hours · walk-in or workshop claims."
 
 **Pricing presentation (p24):** "Always say "excl. VAT" and "guide" — final price on quote · Format: R1 350 (space as thousands separator) · Never "from R…" without the zone and band".
 
@@ -135,13 +137,21 @@ See `components/<Name>/README.md`.
 - ContactCards — Tailwind cards on /contact.
 - IgnitionRule — Intentional addition: the book's "Ignition rule 96 × 5 px under headings" (p22) has no web implementation; this supplies one.
 
+## Templates in use
+
+Brand Book p27 lists the templates in use — "Website · WhatsApp kit · rate card · Email signature · Letterhead A4 · A5 leave-behind · Business card · Runner ID · Vehicle branding (target) · Workwear polo" — and "NOT BUILT YET: Proposal · report · invoice template · event signage · social master in Canva". The stored exports — four social squares, four wave-1 posts, the delivery post, a story, two portrait posts, the email-signature sheet, the WhatsApp QR story and rate card, exported 2026-10-08 — live in `assets/Templates/` with Canva edit links; edit in Canva, re-export, replace the file.
+
+The four squares share one pattern: `main-full-dark.png` top-left on `asphalt-black` (each export adds an off-palette orange glow, #261000–#462100); an `ignition-orange` `brand-kicker` in caps (untracked in the exports; on two squares it is the Canva design name); a two-line `brand-display` (Bebas Neue caps) headline at ≈85–93 px, line 1 `white`, line 2 `ignition-orange`; a `brand-lead` in `titanium-silver` sentence case; cards or chips with #101010–#141414 fills and 1–2 px hairlines or outlines; a full-width 3–5 px `ignition-orange` rule over a #080808 footer band carrying "Driven By People. Further Together." (`titanium-silver`) and "WhatsApp +27 66 271 5887" (`white`). The book has no social spec (p27: "social master in Canva" is NOT BUILT YET); recommended for that master: one wordmark-S height clear around the lockup (p11), a tracked-caps kicker (p17), unfilled `radius-card` cards with a `hairline` in `steel-grey` or `titanium-silver` (p22), a 5 px `ignition-rule-height` rule, and the band in `asphalt-black` (`accent-4` is the site's border-left token, not a book value).
+
+Most broken hard rules: the approved logo file only — never "redraw, retype or AI-generate the wordmark" (p13; seven pieces, plus story-quote's typeset sign-off — unclear) — and "no fake stats" (p27; the Instagram post's five stars). Verdicts, fixes, open questions: `assets/Templates/README.md`.
+
 ## 9. Discrepancies for Andries Liebenberg to settle
 
 | # Topic | Brand Book | Site |
 |---|---|---|
 | 1 Fonts | Bebas Neue / Inter (p16) | Oswald / Montserrat |
-| 2 Web address | spoorlangs.lovable.app (p25) | spoorlangs.online |
-| 3 Email | corrupted field; .co.za "email domain only" (p25) | drive@spoorlangs.online; `contact-cta.png` says .co.za |
+| 2 Web address — **resolved: spoorlangs.online** | p25 updated 2026-10-08: "Web is spoorlangs.online (https://spoorlangs.online)" | spoorlangs.online |
+| 3 Email — **resolved: drive@spoorlangs.online** | p25 updated 2026-10-08: "Email is drive@spoorlangs.online" | drive@spoorlangs.online; `contact-cta.png` still prints .co.za |
 | 4 Transitions | "200–400 ms", ease-out (p21) | `.2s`, no easing |
 | 5 Icons | 1.5 px, orange highlight (p20) | lucide 2 px, single ink |
 | 6 Hours line | no "invented trading hours" (p25) | "Nico replies from 07:30" |
@@ -168,6 +178,6 @@ See `components/<Name>/README.md`.
 
 ## 10. Known gaps and open decisions
 
-Open decisions (p28): "01 Light / print version of this book for long documents? · 02 CMYK and Pantone values for cards and banners? · 03 Afrikaans edition? · 04 Switch the web address to spoorlangs.online? · 05 Vector logo masters (SVG / PDF) + redraw Monochrome Black · 06 Real photography — APPROVED Oct 2026 (Photo Shoot Brief) · 07 Logo animation — DONE Oct 2026 (Logo Animation design)".
+Open decisions (p28): "01 Light / print version of this book for long documents? · 02 CMYK and Pantone values for cards and banners? · 03 Afrikaans edition? · 04 Web address — DECIDED 8 Oct 2026: spoorlangs.online + drive@spoorlangs.online · 05 Vector logo masters (SVG / PDF) + redraw Monochrome Black · 06 Real photography — APPROVED Oct 2026 (Photo Shoot Brief) · 07 Logo animation — DONE Oct 2026 (Logo Animation design)".
 
 Not in source: vector or transparent logo; white cut-out for orange; titanium one-colour mark for the polo; Bebas Neue weight and kicker tracking; book icon artwork; a light theme; status colours beyond orange; quote-sent and booking-sent copy; rates for "Luxury & classic" or outside the three zones; cancellation and payment figures; awards, client logos, testimonials ("none on file", p28); templates "NOT BUILT YET: Proposal · report · invoice template · event signage · social master in Canva" (p27).

@@ -54,7 +54,7 @@ Avoid: ""cheap / cheapest / budget" · corporate fog (leverage, synergy, seamles
 - HERO A: "Vehicle Delivery. Done Right." — the site types "Vehicle delivery." + "Done right." in sentence case, uppercased by CSS, "Done right." orange (flagged).
 - HERO B: "South Africa's Trusted Vehicle Delivery Network." — not on the site.
 - HERO C: "Driven By People. Further Together."
-- Retired: ""The car. At once." and "Ons ry spoorslags." are retired as primary lines on new assets."
+- Retired: ""The car. At once." and "Ons ry spoorlangs." are retired as primary lines on new assets."
 
 ## Microcopy and CTAs
 
@@ -89,9 +89,9 @@ Figures identical in both sources; labels differ (site column "After-hours / Sun
 
 ## Contact block and rules (p25 + site)
 
-"CONTACT BLOCK — COPY EXACTLY": Business "Spoorlangs (Pty) Ltd" · Owner "Nico Strydom" · Location "Kempton Park" · Coverage "Johannesburg & Greater Gauteng, on wheels" · WhatsApp "+27 66 271 5887" · Email: the book's field is a corrupted "[email protected]" and its rule says "spoorlangs.co.za is the email domain only — never shown as a website"; the site publishes "drive@spoorlangs.online" · Web: book "https://spoorlangs.lovable.app" ("until Andries confirms the switch to spoorlangs.online"); site "https://spoorlangs.online/". Rules: "City only: Kempton Park. Never a street address — clients never visit us." · "Public owner name: Nico." Site extras: "Message any time · Nico replies from 07:30 · we confirm your window." (the site's own line; the book forbids "invented trading hours"); "We come to you — no walk-in office." (site: /contact).
+"CONTACT BLOCK — COPY EXACTLY": Business "Spoorlangs (Pty) Ltd" · Owner "Nico Strydom" · Location "Kempton Park" · Coverage "Johannesburg & Greater Gauteng, on wheels" · WhatsApp "+27 66 271 5887" · Email "drive@spoorlangs.online" · Web "https://spoorlangs.online". Rules (p25, updated 2026-10-08): "Web is spoorlangs.online (https://spoorlangs.online). Locked by Andries 2026-10-08." · "Email is drive@spoorlangs.online. No other domain or email address is ever shown." The earlier spoorlangs.co.za email domain and spoorlangs.lovable.app web line are retired; never print them. Rules: "City only: Kempton Park. Never a street address — clients never visit us." · "Public owner name: Nico." Site extras: "Message any time · Nico replies from 07:30 · we confirm your window." (the site's own line; the book forbids "invented trading hours"); "We come to you — no walk-in office." (site: /contact).
 
-NEVER PUBLISH (p25): "A street line or "123 Main Road" · +27 11 555 0101 · "[email protected]" (an example address, obfuscated on the page) · invented trading hours · walk-in or workshop claims."
+NEVER PUBLISH (p25): "A street line or "123 Main Road" · +27 11 555 0101 · any other email address · invented trading hours · walk-in or workshop claims."
 
 ## Legal line
 

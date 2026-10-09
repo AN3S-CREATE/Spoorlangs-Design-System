@@ -7,7 +7,7 @@ Reading column for the privacy page: uppercase h2s, titanium paragraphs, bullets
 **Do**
 - Type h2s in sentence case; CSS uppercases them (Brand Book p17).
 - Keep body `--titanium` (11:1 on Asphalt, p26) and links `--orange` underlined.
-- Contact line follows the book's rule "City only: Kempton Park. Never a street address" (p25), but it is the site's own line, not the book's "COPY EXACTLY" block: owner, coverage, email domain and web line differ (README §9 rows 2–3) — for Andries Liebenberg.
+- Contact line follows the book's rule "City only: Kempton Park. Never a street address" (p25), but it is the site's own line, not the book's "COPY EXACTLY" block: owner and coverage lines differ — for Andries Liebenberg. Email and web already match the domain settled on 2026-10-08, spoorlangs.online (README §9 rows 2–3).
 - Date every policy change in the intro: "Last updated: 15 September 2026."
 
 **Don't**
@@ -18,6 +18,6 @@ Reading column for the privacy page: uppercase h2s, titanium paragraphs, bullets
 
 **States:** links `--orange` underlined; back link orange-underlined and eyebrow `--titanium` here (`.legal-page a`/`.legal-page p` outrank them — source quirk, kept); focus from Base `:focus-visible`; no hover or breakpoint rules.
 
-**Flags for Andries Liebenberg:** email — site `drive@spoorlangs.online`, book p25 `spoorlangs.co.za` (field corrupted); web — book p25 `spoorlangs.lovable.app`, site spoorlangs.online; type — site Oswald/Montserrat, book Bebas Neue/Inter.
+**Settled 2026-10-08:** email `drive@spoorlangs.online` and web spoorlangs.online — the site and book p25 now agree. **Flags for Andries Liebenberg:** type — site Oswald/Montserrat, book Bebas Neue/Inter.
 
 **Gaps (not in source):** no h3, contents list, terms page, light/print variant or Afrikaans edition (book open decision 03).

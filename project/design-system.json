@@ -26,7 +26,8 @@
   "Logos",
   "Icons",
   "Imagery",
-  "Motion"
+  "Motion",
+  "Templates"
  ],
  "assetGroups": {
   "Logos": {
@@ -368,6 +369,119 @@
      "type": "image/gif"
     }
    }
+  },
+  "Templates": {
+   "name": "Templates",
+   "tile": "m",
+   "order": [
+    "social-trust-format.png",
+    "social-service-cta.png",
+    "social-nico-factor.png",
+    "social-behind-the-wheel.png",
+    "wave1-01-coming-soon.png",
+    "wave1-02-milestone.png",
+    "wave1-03-contact.png",
+    "wave1-05-fleet.png",
+    "delivery-post-live-delivery.png",
+    "story-quote.png",
+    "edge-to-edge-delivery.png",
+    "instagram-launch-post.png",
+    "email-signature-launch.png",
+    "wa-qr-status-story.png",
+    "wa-rate-card-square.png"
+   ],
+   "files": {
+    "social-trust-format.png": {
+     "name": "social-trust-format.png",
+     "blob": "293f01dac26f5f35b5d6d1c2a9071c31",
+     "size": 265262,
+     "type": "image/png"
+    },
+    "social-service-cta.png": {
+     "name": "social-service-cta.png",
+     "blob": "4adeac17b178b489c127467423700900",
+     "size": 241355,
+     "type": "image/png"
+    },
+    "social-nico-factor.png": {
+     "name": "social-nico-factor.png",
+     "blob": "110f58b5fbbc747dc3712148702f000f",
+     "size": 330529,
+     "type": "image/png"
+    },
+    "social-behind-the-wheel.png": {
+     "name": "social-behind-the-wheel.png",
+     "blob": "9be5b46102eec44f3daa89150b5884ba",
+     "size": 276353,
+     "type": "image/png"
+    },
+    "wave1-01-coming-soon.png": {
+     "name": "wave1-01-coming-soon.png",
+     "blob": "f452cc119e21fcd18a4d36c73b6d7b69",
+     "size": 7861132,
+     "type": "image/png"
+    },
+    "wave1-02-milestone.png": {
+     "name": "wave1-02-milestone.png",
+     "blob": "950fe73c6fa3f290a3246c018afe91d2",
+     "size": 6106930,
+     "type": "image/png"
+    },
+    "wave1-03-contact.png": {
+     "name": "wave1-03-contact.png",
+     "blob": "faadd9de9f67744ab80279f8cf9dd1a9",
+     "size": 4545075,
+     "type": "image/png"
+    },
+    "wave1-05-fleet.png": {
+     "name": "wave1-05-fleet.png",
+     "blob": "e54b80c3cdfab7e4f2873077854eb298",
+     "size": 4749723,
+     "type": "image/png"
+    },
+    "delivery-post-live-delivery.png": {
+     "name": "delivery-post-live-delivery.png",
+     "blob": "479105a34af55b68c68d74e8b2aefbc3",
+     "size": 3436865,
+     "type": "image/png"
+    },
+    "story-quote.png": {
+     "name": "story-quote.png",
+     "blob": "eb930ec7a534e783f081981b4eb2c764",
+     "size": 310040,
+     "type": "image/png"
+    },
+    "edge-to-edge-delivery.png": {
+     "name": "edge-to-edge-delivery.png",
+     "blob": "03e87409a94116fa3e733bbe0ca5fa86",
+     "size": 827636,
+     "type": "image/png"
+    },
+    "instagram-launch-post.png": {
+     "name": "instagram-launch-post.png",
+     "blob": "4257cd5e05d5d34e188def68b9e26417",
+     "size": 259394,
+     "type": "image/png"
+    },
+    "email-signature-launch.png": {
+     "name": "email-signature-launch.png",
+     "blob": "9833aaab933104aa73b4238f6ca64fbf",
+     "size": 35069,
+     "type": "image/png"
+    },
+    "wa-qr-status-story.png": {
+     "name": "wa-qr-status-story.png",
+     "blob": "cbf086a304acc3767ba7599fb9653b3c",
+     "size": 391702,
+     "type": "image/png"
+    },
+    "wa-rate-card-square.png": {
+     "name": "wa-rate-card-square.png",
+     "blob": "f439bb809d02d9959bd3cefffe4f95cf",
+     "size": 235449,
+     "type": "image/png"
+    }
+   }
   }
  },
  "blobs": {},
@@ -377,8 +491,8 @@
  },
  "lastChange": {
   "by": "Andries Liebenberg",
-  "at": "2026-10-08T17:37:39Z",
+  "at": "2026-10-08T23:53:40Z",
   "via": "Claude Code",
-  "note": "Built from spoorlangs.online (fetched 2026-10-08) and Spoorlangs Brand Book v1.0 (8 Oct 2026); approved logo set 14 Sep 2026."
+  "note": "Re-synced with the Brand Book after its Canva update: p25 contact block and rules, p28 decision 04, p08 retired line."
  }
 }

@@ -18,6 +18,6 @@ Contact page pieces: two bordered .5rem-radius contact cards and the areas-we-se
 
 **States:** card rest 1px `--border`; `hover:border-primary` declared but defeated by the unlayered `* { border-color }` — no visible change (source bug); focus = global `:focus-visible`, 2px `--orange`, offset 4px; chips: none; two columns from 640px.
 
-**Flags for Andries Liebenberg:** email domain — site `drive@spoorlangs.online`, book p25 names `spoorlangs.co.za`; card radius 8px vs p22 "Cards 16 px"; `--border` hairline vs p22 "1–2 px steel or titanium"; icons 2px single ink vs p20 1.5px with one orange highlight; the dead hover above.
+**Settled 2026-10-08:** email `drive@spoorlangs.online` — the site and book p25 now agree. **Flags for Andries Liebenberg:** card radius 8px vs p22 "Cards 16 px"; `--border` hairline vs p22 "1–2 px steel or titanium"; icons 2px single ink vs p20 1.5px with one orange highlight; the dead hover above.
 
 **Gaps (not in source):** no active/visited styling, third channel or light theme; `text-2xl` on the h2 is inert.
