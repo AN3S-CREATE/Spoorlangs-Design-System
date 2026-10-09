@@ -27,7 +27,11 @@
   "Icons",
   "Imagery",
   "Motion",
-  "Templates"
+  "Templates",
+  "WA Kits",
+  "Covers",
+  "Print",
+  "Pitch deck"
  ],
  "assetGroups": {
   "Logos": {
@@ -144,8 +148,8 @@
     },
     "cover-facebook-820x312-LAUNCH.png": {
      "name": "cover-facebook-820x312-LAUNCH.png",
-     "blob": "7402b60d143954b290181592855efac3",
-     "size": 33182,
+     "blob": "61966fe7ae9df4ef68eae481b7b9a304",
+     "size": 34055,
      "type": "image/png"
     }
    }
@@ -306,8 +310,8 @@
     },
     "contact-cta.png": {
      "name": "contact-cta.png",
-     "blob": "f2696ac4c8443cbb6aaf7d0fbdc5947b",
-     "size": 1289760,
+     "blob": "29632c489d9de9b3e035b868a4b1c6a1",
+     "size": 1190176,
      "type": "image/png"
     },
     "service-spotlight-1.png": {
@@ -378,7 +382,7 @@
     "social-service-cta.png",
     "social-nico-factor.png",
     "social-behind-the-wheel.png",
-    "wave1-01-coming-soon.png",
+    "wave1-01-now-live.png",
     "wave1-02-milestone.png",
     "wave1-03-contact.png",
     "wave1-05-fleet.png",
@@ -393,62 +397,62 @@
    "files": {
     "social-trust-format.png": {
      "name": "social-trust-format.png",
-     "blob": "293f01dac26f5f35b5d6d1c2a9071c31",
-     "size": 265262,
+     "blob": "81f2867e0573061616602c0cae2adda8",
+     "size": 291701,
      "type": "image/png"
     },
     "social-service-cta.png": {
      "name": "social-service-cta.png",
-     "blob": "4adeac17b178b489c127467423700900",
-     "size": 241355,
+     "blob": "4635bb473f492ee19822909f71c837d2",
+     "size": 268352,
      "type": "image/png"
     },
     "social-nico-factor.png": {
      "name": "social-nico-factor.png",
-     "blob": "110f58b5fbbc747dc3712148702f000f",
-     "size": 330529,
+     "blob": "3d2ac035ac27513e7078e2fd9b0de1ae",
+     "size": 322150,
      "type": "image/png"
     },
     "social-behind-the-wheel.png": {
      "name": "social-behind-the-wheel.png",
-     "blob": "9be5b46102eec44f3daa89150b5884ba",
-     "size": 276353,
+     "blob": "53a6ea267f5939f0c2353b9a76394d9f",
+     "size": 276289,
      "type": "image/png"
     },
-    "wave1-01-coming-soon.png": {
-     "name": "wave1-01-coming-soon.png",
-     "blob": "f452cc119e21fcd18a4d36c73b6d7b69",
-     "size": 7861132,
+    "wave1-01-now-live.png": {
+     "name": "wave1-01-now-live.png",
+     "blob": "66848959c037cc555b8c663077717a57",
+     "size": 7506959,
      "type": "image/png"
     },
     "wave1-02-milestone.png": {
      "name": "wave1-02-milestone.png",
-     "blob": "950fe73c6fa3f290a3246c018afe91d2",
-     "size": 6106930,
+     "blob": "e56055c880ad1965472477a122244ed5",
+     "size": 6009979,
      "type": "image/png"
     },
     "wave1-03-contact.png": {
      "name": "wave1-03-contact.png",
-     "blob": "faadd9de9f67744ab80279f8cf9dd1a9",
-     "size": 4545075,
+     "blob": "5364324db6bade630809f3f45aa9bcd1",
+     "size": 4499047,
      "type": "image/png"
     },
     "wave1-05-fleet.png": {
      "name": "wave1-05-fleet.png",
-     "blob": "e54b80c3cdfab7e4f2873077854eb298",
-     "size": 4749723,
+     "blob": "ddd84a51907dfbc49e2fc8d2d9cc3bf3",
+     "size": 4530879,
      "type": "image/png"
     },
     "delivery-post-live-delivery.png": {
      "name": "delivery-post-live-delivery.png",
-     "blob": "479105a34af55b68c68d74e8b2aefbc3",
-     "size": 3436865,
+     "blob": "b9cb8d18a59de63c148f04acbd9be245",
+     "size": 3490770,
      "type": "image/png"
     },
     "story-quote.png": {
      "name": "story-quote.png",
-     "blob": "eb930ec7a534e783f081981b4eb2c764",
-     "size": 310040,
+     "blob": "fb9712097418d7fc52b9eab20940b3ec",
+     "size": 355337,
      "type": "image/png"
     },
     "edge-to-edge-delivery.png": {
@@ -465,20 +469,402 @@
     },
     "email-signature-launch.png": {
      "name": "email-signature-launch.png",
-     "blob": "9833aaab933104aa73b4238f6ca64fbf",
-     "size": 35069,
+     "blob": "f099fb1759229460ca46a8a14c33f849",
+     "size": 49755,
      "type": "image/png"
     },
     "wa-qr-status-story.png": {
      "name": "wa-qr-status-story.png",
-     "blob": "cbf086a304acc3767ba7599fb9653b3c",
-     "size": 391702,
+     "blob": "5fb19b0687808945e83ebb0cbe17e6a3",
+     "size": 433801,
      "type": "image/png"
     },
     "wa-rate-card-square.png": {
      "name": "wa-rate-card-square.png",
-     "blob": "f439bb809d02d9959bd3cefffe4f95cf",
-     "size": 235449,
+     "blob": "3b6c4e311c27e79a1e62c565168427a4",
+     "size": 280349,
+     "type": "image/png"
+    }
+   }
+  },
+  "WA Kits": {
+   "name": "WA Kits",
+   "tile": "m",
+   "order": [
+    "thank-you-story.png",
+    "thank-you-square.png",
+    "incident-report-story.png",
+    "incident-report-square.png",
+    "invoice-reminder-story.png",
+    "invoice-reminder-square.png",
+    "follow-up-story.png",
+    "follow-up-square.png",
+    "after-delivery-story.png",
+    "after-delivery-square.png",
+    "delay-exception-story.png",
+    "delay-exception-square.png",
+    "collection-auth-story.png",
+    "collection-auth-square.png",
+    "cancel-reschedule-story.png",
+    "cancel-reschedule-square.png",
+    "booking-confirm-story.png",
+    "booking-confirm-square.png"
+   ],
+   "files": {
+    "thank-you-story.png": {
+     "name": "thank-you-story.png",
+     "blob": "a823b7916d023a0bba89c2df3d586799",
+     "size": 510696,
+     "type": "image/png"
+    },
+    "thank-you-square.png": {
+     "name": "thank-you-square.png",
+     "blob": "d71c2ac7f9732637ab520c7ca894ce28",
+     "size": 879113,
+     "type": "image/png"
+    },
+    "incident-report-story.png": {
+     "name": "incident-report-story.png",
+     "blob": "639bd16f362e8b09fc94b56a49945231",
+     "size": 496102,
+     "type": "image/png"
+    },
+    "incident-report-square.png": {
+     "name": "incident-report-square.png",
+     "blob": "933c7a4edd54712bb2e599e62025d4e7",
+     "size": 256635,
+     "type": "image/png"
+    },
+    "invoice-reminder-story.png": {
+     "name": "invoice-reminder-story.png",
+     "blob": "98a64f349308a6e52c297d31a3499d9d",
+     "size": 504995,
+     "type": "image/png"
+    },
+    "invoice-reminder-square.png": {
+     "name": "invoice-reminder-square.png",
+     "blob": "cb7ff8b4079e574fb74c1a297986139b",
+     "size": 262129,
+     "type": "image/png"
+    },
+    "follow-up-story.png": {
+     "name": "follow-up-story.png",
+     "blob": "ec29ece256df8e68d162be2574af5051",
+     "size": 509381,
+     "type": "image/png"
+    },
+    "follow-up-square.png": {
+     "name": "follow-up-square.png",
+     "blob": "4cdc64fe490914f28a39a3f3c6059a84",
+     "size": 264074,
+     "type": "image/png"
+    },
+    "after-delivery-story.png": {
+     "name": "after-delivery-story.png",
+     "blob": "d74c626711f1a55cad1a6101ce416fca",
+     "size": 520786,
+     "type": "image/png"
+    },
+    "after-delivery-square.png": {
+     "name": "after-delivery-square.png",
+     "blob": "0fc586b9741c6c7e0575a51aa800bf6f",
+     "size": 269996,
+     "type": "image/png"
+    },
+    "delay-exception-story.png": {
+     "name": "delay-exception-story.png",
+     "blob": "8d5433efc87c3f04af5a67f0a6d19bbb",
+     "size": 494047,
+     "type": "image/png"
+    },
+    "delay-exception-square.png": {
+     "name": "delay-exception-square.png",
+     "blob": "c5f3ee42f62b3c7fb7ce6a9058334e44",
+     "size": 256683,
+     "type": "image/png"
+    },
+    "collection-auth-story.png": {
+     "name": "collection-auth-story.png",
+     "blob": "db221e3432522d3ff95f06a787850148",
+     "size": 539505,
+     "type": "image/png"
+    },
+    "collection-auth-square.png": {
+     "name": "collection-auth-square.png",
+     "blob": "b9c0cd5932eca2c65a7013248ea12da3",
+     "size": 277501,
+     "type": "image/png"
+    },
+    "cancel-reschedule-story.png": {
+     "name": "cancel-reschedule-story.png",
+     "blob": "a7e93a1d305373532c85294c8ee23378",
+     "size": 533595,
+     "type": "image/png"
+    },
+    "cancel-reschedule-square.png": {
+     "name": "cancel-reschedule-square.png",
+     "blob": "76d4da5f67cf4340a3c1f494c782a54f",
+     "size": 275682,
+     "type": "image/png"
+    },
+    "booking-confirm-story.png": {
+     "name": "booking-confirm-story.png",
+     "blob": "97bf7bca80b374b71eade0ea1cc25b94",
+     "size": 539480,
+     "type": "image/png"
+    },
+    "booking-confirm-square.png": {
+     "name": "booking-confirm-square.png",
+     "blob": "5b8b7ff36e038927f41571923ffd20c1",
+     "size": 278251,
+     "type": "image/png"
+    }
+   }
+  },
+  "Covers": {
+   "name": "Covers",
+   "tile": "m",
+   "order": [
+    "ig-bio-banner.png",
+    "facebook-cover.png",
+    "launch-banner.png",
+    "linkedin-cover-full-bleed.png",
+    "tiktok-cover-v3.png"
+   ],
+   "files": {
+    "ig-bio-banner.png": {
+     "name": "ig-bio-banner.png",
+     "blob": "49bda289c68d7a39c4d87889a0db0939",
+     "size": 135450,
+     "type": "image/png"
+    },
+    "facebook-cover.png": {
+     "name": "facebook-cover.png",
+     "blob": "5353570f0a673812f54e7ea775623fa0",
+     "size": 77545,
+     "type": "image/png"
+    },
+    "launch-banner.png": {
+     "name": "launch-banner.png",
+     "blob": "583cf2fe9b1c0adb8df92e19960e40ca",
+     "size": 489505,
+     "type": "image/png"
+    },
+    "linkedin-cover-full-bleed.png": {
+     "name": "linkedin-cover-full-bleed.png",
+     "blob": "9c73f688f7a5b1e71898a5791e3c5ec2",
+     "size": 312066,
+     "type": "image/png"
+    },
+    "tiktok-cover-v3.png": {
+     "name": "tiktok-cover-v3.png",
+     "blob": "668404fa84d2bcea3968eec04c208efb",
+     "size": 292733,
+     "type": "image/png"
+    }
+   }
+  },
+  "Print": {
+   "name": "Print",
+   "tile": "m",
+   "order": [
+    "asphalt-full-bleed.png",
+    "compliment-slip.png",
+    "dl-envelope-front.png",
+    "qr-sticker.png",
+    "runner-id-back.png",
+    "polo-left-chest.png",
+    "bakkie-placement.png",
+    "door-magnet-sizes.png",
+    "door-magnet-front.png",
+    "letterhead-a4-blank.png",
+    "letterhead-a4.png",
+    "leave-behind-back.png",
+    "leave-behind-front.png",
+    "business-card-front.png",
+    "business-card-back.png",
+    "embroidery-sizes.png",
+    "workwear-placement-guide.png",
+    "lanyard-placement.png",
+    "runner-id-front-runner.png",
+    "runner-id-front.png",
+    "business-card-full-bleed.png"
+   ],
+   "files": {
+    "asphalt-full-bleed.png": {
+     "name": "asphalt-full-bleed.png",
+     "blob": "5bb36d43f72911bbf85c7c10d65576a9",
+     "size": 3991287,
+     "type": "image/png"
+    },
+    "compliment-slip.png": {
+     "name": "compliment-slip.png",
+     "blob": "6bf429763c0cb4b2b96103a2e67185c2",
+     "size": 216708,
+     "type": "image/png"
+    },
+    "dl-envelope-front.png": {
+     "name": "dl-envelope-front.png",
+     "blob": "9a53d5df41087b1167dfc532c8bdde89",
+     "size": 254539,
+     "type": "image/png"
+    },
+    "qr-sticker.png": {
+     "name": "qr-sticker.png",
+     "blob": "37b5893fdb4d919187e2baf0d0a02d3d",
+     "size": 104310,
+     "type": "image/png"
+    },
+    "runner-id-back.png": {
+     "name": "runner-id-back.png",
+     "blob": "72788df79caec7466dcccee8eadaea67",
+     "size": 159748,
+     "type": "image/png"
+    },
+    "polo-left-chest.png": {
+     "name": "polo-left-chest.png",
+     "blob": "1bb3159b6b802949636425a9029752df",
+     "size": 213100,
+     "type": "image/png"
+    },
+    "bakkie-placement.png": {
+     "name": "bakkie-placement.png",
+     "blob": "f359f028777225f406a9e4db0bb28bd4",
+     "size": 373540,
+     "type": "image/png"
+    },
+    "door-magnet-sizes.png": {
+     "name": "door-magnet-sizes.png",
+     "blob": "ff15ad13c422052e5c919adeafd8869e",
+     "size": 229805,
+     "type": "image/png"
+    },
+    "door-magnet-front.png": {
+     "name": "door-magnet-front.png",
+     "blob": "4ccfdeab686d90dbf06a267c88e52494",
+     "size": 249614,
+     "type": "image/png"
+    },
+    "letterhead-a4-blank.png": {
+     "name": "letterhead-a4-blank.png",
+     "blob": "094660b8ebcce97027a132c9baf25de5",
+     "size": 189065,
+     "type": "image/png"
+    },
+    "letterhead-a4.png": {
+     "name": "letterhead-a4.png",
+     "blob": "a80d5c2bb2a49bbd20c0776840f72850",
+     "size": 1046583,
+     "type": "image/png"
+    },
+    "leave-behind-back.png": {
+     "name": "leave-behind-back.png",
+     "blob": "894261bbe21202b12d334345c9b535b4",
+     "size": 925826,
+     "type": "image/png"
+    },
+    "leave-behind-front.png": {
+     "name": "leave-behind-front.png",
+     "blob": "4f7041206269b0e211240cfd117455d2",
+     "size": 1052198,
+     "type": "image/png"
+    },
+    "business-card-front.png": {
+     "name": "business-card-front.png",
+     "blob": "a0d369460520696042ff3ea560facd76",
+     "size": 227518,
+     "type": "image/png"
+    },
+    "business-card-back.png": {
+     "name": "business-card-back.png",
+     "blob": "0c795e74a46f5aa9424e09f53455944e",
+     "size": 119244,
+     "type": "image/png"
+    },
+    "embroidery-sizes.png": {
+     "name": "embroidery-sizes.png",
+     "blob": "441e1c881f4f06223af1426ccb868882",
+     "size": 214465,
+     "type": "image/png"
+    },
+    "workwear-placement-guide.png": {
+     "name": "workwear-placement-guide.png",
+     "blob": "5651be31fcb0aefb5751600c80df47df",
+     "size": 207308,
+     "type": "image/png"
+    },
+    "lanyard-placement.png": {
+     "name": "lanyard-placement.png",
+     "blob": "295024450c7d4b2dc364a2f6630f9a7e",
+     "size": 183294,
+     "type": "image/png"
+    },
+    "runner-id-front-runner.png": {
+     "name": "runner-id-front-runner.png",
+     "blob": "db48de1fa893c0575a8991a24b9133ae",
+     "size": 169440,
+     "type": "image/png"
+    },
+    "runner-id-front.png": {
+     "name": "runner-id-front.png",
+     "blob": "e384344007e83b8876cd9833f2c72905",
+     "size": 164886,
+     "type": "image/png"
+    },
+    "business-card-full-bleed.png": {
+     "name": "business-card-full-bleed.png",
+     "blob": "aff98632db14fcbe7993257357b91d85",
+     "size": 641583,
+     "type": "image/png"
+    }
+   }
+  },
+  "Pitch deck": {
+   "name": "Pitch deck",
+   "tile": "l",
+   "order": [
+    "pitch-01-title.png",
+    "pitch-02-problem.png",
+    "pitch-03-what-we-do.png",
+    "pitch-04-rates.png",
+    "pitch-05-proof.png",
+    "pitch-06-ask.png"
+   ],
+   "files": {
+    "pitch-01-title.png": {
+     "name": "pitch-01-title.png",
+     "blob": "a0b53860579b786ab2169e4f54e6f61e",
+     "size": 292914,
+     "type": "image/png"
+    },
+    "pitch-02-problem.png": {
+     "name": "pitch-02-problem.png",
+     "blob": "90d2f8cd57c24e35e57bba116f7ea5cb",
+     "size": 324304,
+     "type": "image/png"
+    },
+    "pitch-03-what-we-do.png": {
+     "name": "pitch-03-what-we-do.png",
+     "blob": "1bcb40e2db52b7483f1673be2ab09dd8",
+     "size": 260102,
+     "type": "image/png"
+    },
+    "pitch-04-rates.png": {
+     "name": "pitch-04-rates.png",
+     "blob": "b7f2ef3080da86e474f3168a92483a03",
+     "size": 204036,
+     "type": "image/png"
+    },
+    "pitch-05-proof.png": {
+     "name": "pitch-05-proof.png",
+     "blob": "df08241d64a29b6ff8b7bb879284d7fa",
+     "size": 287590,
+     "type": "image/png"
+    },
+    "pitch-06-ask.png": {
+     "name": "pitch-06-ask.png",
+     "blob": "a262feb3e869516cb9607eca89fee59a",
+     "size": 285089,
      "type": "image/png"
     }
    }
@@ -491,8 +877,8 @@
  },
  "lastChange": {
   "by": "Andries Liebenberg",
-  "at": "2026-10-08T23:53:40Z",
+  "at": "2026-10-09T02:47:37Z",
   "via": "Claude Code",
-  "note": "Re-synced with the Brand Book after its Canva update: p25 contact block and rules, p28 decision 04, p08 retired line."
+  "note": "Canva corrections to spoorlangs.online: 13 Templates, the contact image and the Facebook cover re-exported; Print, Covers, Pitch deck and WA Kits added (50 designs); nothing stored prints another domain."
  }
 }
